@@ -854,6 +854,7 @@
       href="../../../assets/wp-content/themes/edusion/assets/bootstrap/css/bootstrap.min.css?ver=6.4.1"
       media="all"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link
       rel="stylesheet"
       id="font-awesome-css"
