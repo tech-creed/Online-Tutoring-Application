@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 11, 2023 at 09:35 AM
+-- Generation Time: Nov 11, 2023 at 12:42 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,7 +33,7 @@ CREATE TABLE `rooms` (
   `meeting_title` varchar(255) NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
-  `duration` varchar(255) NOT NULL,
+  `duration` int(12) NOT NULL,
   `meeting_link` varchar(535) NOT NULL,
   `is_closed` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -53,6 +53,15 @@ CREATE TABLE `users` (
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `role`, `first_name`, `last_name`) VALUES
+(123, 'student1', '123', 'student1@gmail.com', 'student', 'student', '1'),
+(1234, 'stu2', '1234', 'test@gmail.com', 'student', 'test', '123'),
+(12345, 'student3', '12345', 'testing@gmail.com', 'student', 'test', '12345');
 
 --
 -- Indexes for dumped tables
@@ -78,13 +87,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(12) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12346;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
