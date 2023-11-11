@@ -1,0 +1,252 @@
+/*START 1200PX CSS CODE*/
+@media only screen and (max-width:1200px) { 
+	.banner_subs {
+		width: 97%;
+	}
+}
+/*END 1200PX CSS CODE*/
+
+/*START 1024PX CSS CODE*/
+@media only screen and (max-width:1024px) { 
+#main-menu ul li {
+	margin-left: 30px;
+}
+}
+/*END 1024PX CSS CODE*/
+
+
+/*START 991PX CSS CODE*/
+@media only screen and (max-width: 991px){	
+	
+	#navigation.navbar-fixed{
+		padding: 10px 0 30px;
+	}
+#main-menu ul li {
+	margin-left: 9px;
+}
+#main-menu ul li a {
+	font-size: 15px;
+}
+#navigation {
+	padding: 10px 0 20px;
+	background: #fff;
+}
+.home_content h1 {font-size: 60px;line-height:70px;}
+.our-team{ margin-bottom: 30px; }
+#main-menu{
+	display: none;
+}
+#mobile_menu{
+	display: block;
+	width: 100%;
+	}
+.slicknav_nav{
+background-color: #fff;
+}
+#navigation #mobile_menu li a {
+	color: #1a2d62;
+	font-weight: 500;
+}
+#navigation.navbar-fixed #mobile_menu li a{
+	color: #1a2d62;
+}
+.slicknav_nav a{
+	padding: 5px 0px;
+	-webkit-transition:.3s;
+	-o-transition: .3s;
+	transition: .3s;
+}
+#navigation #mobile_menu li a:hover,
+#navigation #mobile_menu li a:focus{
+	color: #1a2d62;
+	background:#fff;
+}
+.slicknav_btn {
+	top: 24px;
+	background:#1a2d62;
+}	
+	.#main-menu ul{
+		text-align: right;
+	}
+	.btn_two{
+		margin-right: 0!important;
+		margin-left: 7px!important;
+	}
+	.header_two .call_to_action {
+		float: unset;
+		text-align: center;
+	}
+#testimonial-slider  .owl-buttons .owl-prev{
+	margin-left: -40px;
+}	
+	.about_widget{
+		padding-right: 0;
+		margin-bottom: 30px;
+	}
+	
+	.single-team-home{
+		margin-bottom: 170px;
+	}
+}
+/*END 991PX CSS CODE*/
+
+/*START 880PX CSS CODE*/
+@media only screen and (max-width:880px) { 
+	.call_to_action a{
+		margin-right: 0;
+	}
+	.btn_one {padding: 10px 20px;}
+	.single-top-contact{margin-bottom:30px;}
+	#main-menu ul li a span{display: none;}
+	
+
+.single_tp {margin-bottom:0px;}
+.ab_img img {padding-right:0px;width: 100%;}
+.ab_img{
+	margin-top:0px;
+	margin-bottom:60px;
+}
+.cp_img img {margin-top:60px;}
+
+.single_footer{margin-bottom:40px;}
+	.single_footer.about_widget{
+		margin-bottom: 30px;
+	}
+.pricing_design{margin-bottom:30px;}
+}
+
+/*END 880PX CSS CODE*/
+
+/*START 768PX CSS CODE*/
+@media only screen and (max-width:768px) {
+	.tp-leftarrow.tparrows.zeus,
+	.tp-rightarrow.tparrows.zeus{
+		display: none!important;
+	}
+.topcontrol {display:none;}
+.top_social_profile ul li a{margin-right:10px;margin-bottom:10px;}
+.navbar-brand {padding-top: 20px;}
+.home_content{padding-left:30px;padding-right: 20px;}
+.details-buttons-area {
+justify-content: center;
+}
+	.home_me_img{
+		display: none;
+	}
+.details-buttons-area .social-icons {
+width: 100%;
+margin: 0;
+justify-content: center;
+}
+.home_bg {
+  height: 620px;
+  position: relative;
+}
+.home_content {
+	padding-top: 190px;
+
+}
+	.home_bg2 .home_content{
+		padding-top: 100px;
+	}
+	
+.owl-theme .owl-controls{ margin-top: 20px; }
+.owl-theme .owl-controls{display:none!important; }
+.comment_form textarea { width: 100% }
+
+.ss_case_left {
+	margin-right:0px;
+	margin-bottom:60px;
+	width: 100%;
+}
+	
+}
+/*END 768PX CSS CODE*/
+
+/*START 575PX CSS CODE*/
+@media only screen and (max-width: 575px){
+	.home_bg2{
+		height: 800px;
+	}
+ 
+.course-details-content .tab-content {
+	padding: 0 15px 20px;
+}
+
+.course-details-content .nav li a {
+	font-size: 14px;
+	padding: 5px 10px;
+	}
+	.footer-btm{
+		text-align: center;
+	}
+	.footer_copyright,
+	.footer_menu {
+		float: unset;
+		display: inline-block;
+	}	
+}
+/*END 575PX CSS CODE*/
+
+
+/*START 480PX CSS CODE*/
+@media only screen and (max-width:480px){
+	.home_content h1 {
+    	font-size: 44px;
+  }	
+.section-title p {width:100%;}
+.btn_one {padding: 10px 30px;}
+.logo-contact{display:none;}
+.home_me_img img{display:none;}
+.home_img_two{display:none;}
+.hero-text h1 {
+font-size: 60px;
+line-height:70px;
+}
+.hero-text-img img{display:none;}
+#kenburns_061{margin-top:75px;}
+.course-slide {margin-bottom:30px;}
+.course-slide2 {margin-bottom:30px;}
+.review-contents li .thumb {width: 80px;}
+.review-contents li .cont {
+width: 100%;
+padding: 15px 0 0 0;
+}
+.video-play i {
+width: 80px;
+height: 80px;
+line-height: 80px;
+font-size: 30px;
+}
+.video-play {
+	display: block;
+	position: absolute;
+	top: 60%;
+	left: 40%;
+}
+.single_agent_image img{
+float: left;
+margin-bottom: 50px;
+width: 100%;
+}
+.foot_social{margin-bottom:30px;overflow: hidden;}
+.footer_copyright {display:inline;}
+.footer_menu {
+	float: left;
+	margin-top: 20px;
+}
+.partner_title h3 {font-size:18px;width:100%}
+.section-top-title { width: 100% }
+
+.event-slide {margin-bottom:30px;}
+.single_address{margin-bottom:30px; }
+.single_ins_content {
+	float: left;
+	width: 100%;
+	margin-bottom:30px;
+}
+	.home_sb button i{
+		display: none;
+	}
+}
+/*END 480PX CSS CODE*/
