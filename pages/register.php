@@ -77,8 +77,14 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="password" class="form-label">Name</label>
-                      <input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" required>
+                      <label for="password" class="form-label">First Name</label>
+                      <input type="text" name="fname" class="form-control" id="fname" placeholder="Enter your name" required>
+                      <div class="invalid-feedback">Please enter your password</div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="password" class="form-label">Last Name</label>
+                      <input type="text" name="lname" class="form-control" id="lname" placeholder="Enter your name" required>
                       <div class="invalid-feedback">Please enter your password</div>
                     </div>
 

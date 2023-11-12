@@ -1,12 +1,13 @@
 <?php
 
-require_once("connection.php");
+require_once("connect.php");
 require("functions.php");
 
 
 if (isset($_REQUEST['register_btn'])) {
     $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
-    $name = mysqli_real_escape_string($conn, $_REQUEST['name']);
+    $fname = mysqli_real_escape_string($conn, $_REQUEST['fname']);
+    $lname = mysqli_real_escape_string($conn, $_REQUEST['lname']);
     $role = mysqli_real_escape_string($conn, $_REQUEST['role']);
     $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
 
@@ -15,17 +16,15 @@ if (isset($_REQUEST['register_btn'])) {
     $_SESSION['error'] = 'Email Already taken';
     if (check_email($email)) {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+        $user_id = rand("100000", "999999");
         $reg_date = date("Y-m-d h:i:sa");
-        $d = mysqli_query($conn, "INSERT INTO `users`(`name`, `password`, `email`, `reg_date`, `is_verified`) VALUES ('$name','$hashed_password','$email','$reg_date','0')");
+        $d = mysqli_query($conn,"INSERT INTO `users`(`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES ('$user_id','$hashed_password','$email','$role','$fname','$lname','0','$reg_date')");
         $a = mysqli_query($conn, "INSERT INTO `email_verify`(`email`, `verification_code`) VALUES ('$email','$v_code')");
-        if ($d && sendMail($agent_id, $user_password, $email, $v_code)) {
+        if ($d && sendMail($fname, $email, $user_id, $v_code)) {
             $_SESSION['reg'] = true;
-            $_SESSION['agent_id'] = $agent_id;
-            $_SESSION['Name'] = $username;
-            $_SESSION['email'] = $email;
-            echo '<script>window.location.replace("register.php");</script>';
+            echo '<script>window.location.replace("../pages/register.php");</script>';
         }
     }
-    // header("Location:register.php");
+    header("Location:register.php");
 }
 ?>

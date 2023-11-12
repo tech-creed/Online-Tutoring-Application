@@ -10,12 +10,12 @@ function check_email($email_id)
     $data = mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email_id'");
     // $data = mysqli_num_rows($data);
     if (mysqli_num_rows($data) == 1) {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
-function sendMail($agent_id, $password, $email, $v_code)
+function sendMail($name,$email, $userId, $v_code)
 {
     require("PHPMailer/PHPMailer.php");
     require("PHPMailer/SMTP.php");
@@ -29,30 +29,28 @@ function sendMail($agent_id, $password, $email, $v_code)
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = '3tmoneyworld@gmail.com';                     //SMTP username
-        $mail->Password   = 'dwkzxetvdqjxobmm';                               //SMTP password
+        $mail->Username   = 'kmadavan018@gmail.com';                     //SMTP username
+        $mail->Password   = 'ayiiwxnfkibnkolo';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('3tmoneyworld@gmail.com', '3T Money World');
+        $mail->setFrom('kmadavan018@gmail.com', 'Tutoring');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
 
-        $email_template = "./test.html";
-        $name = "3T$agent_id";
-        $id = "$password";
-        $link = "https://3tmoneyworld.com/resources/verify.php?email=$email&v_code=$v_code";
+        $email_template = "../pages/mail.html";
+        $link = "http://localhost/controllers/verify.php?email=$email&v_code=$v_code";
 
         $message = file_get_contents($email_template);
         $message = str_replace('%name%', $name, $message);
-        $message = str_replace('%id%', $id, $message);
+        $message = str_replace('%userId%', $userId, $message);
         $message = str_replace('%link%', $link, $message);
 
 
-        $mail->Subject = 'Email Verification from 3T Money World';
+        $mail->Subject = 'Email Verification from Tutoring application';
         $mail->Body    = $message;
 
         $mail->send();
