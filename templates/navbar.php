@@ -39,7 +39,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="/controller/logout.php" class="get-started-btn">Logout</a>
+      <a href="/controllers/auth.php?logout_btn=true" class="get-started-btn">Logout</a>
 
     </div>
   </header>

@@ -108,11 +108,10 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
         echo $_SESSION['error'] = 'Invalid';
         header("Location:../pages/forgot.php");
     }
-    header("Location:../pages/forgot.php");
+    header("Location:../pages/login.php");
 }
 
-
-if (isset($_REQUEST['logout_btn'])) {
+if (isset($_GET['logout_btn'])) {
     unset($_SESSION['sess_id']);
     unset($_SESSION['my_id']);
     unset($_SESSION['role']);
