@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 13, 2023 at 11:29 AM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 13, 2023 at 12:50 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,6 +44,30 @@ INSERT INTO `email_verify` (`email`, `verification_code`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `forgot_otp`
+--
+
+CREATE TABLE `forgot_otp` (
+  `s_no` int(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `otp` int(10) NOT NULL,
+  `expire_time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `forgot_otp`
+--
+
+INSERT INTO `forgot_otp` (`s_no`, `email`, `otp`, `expire_time`) VALUES
+(1, 'kmathavan018@gmail.com', 732254, '2023-11-13 04:32:02'),
+(2, 'kmathavan018@gmail.com', 371912, '2023-11-13 04:45:18'),
+(3, 'kmathavan018@gmail.com', 400930, '2023-11-13 04:46:39'),
+(4, 'kmathavan018@gmail.com', 628273, '2023-11-13 04:59:26'),
+(5, 'kmathavan018@gmail.com', 178219, '2023-11-13 05:24:50');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `rooms`
 --
 
@@ -52,26 +76,11 @@ CREATE TABLE `rooms` (
   `student_id` int(12) NOT NULL,
   `meeting_title` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `time` varchar(255) NOT NULL,
+  `time` time NOT NULL,
   `duration` int(12) NOT NULL,
   `meeting_link` varchar(535) NOT NULL,
-  `is_closed` varchar(255) NOT NULL,
-  `meeting_id` bigint(12) NOT NULL
+  `is_closed` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `rooms`
---
-
-INSERT INTO `rooms` (`id`, `student_id`, `meeting_title`, `date`, `time`, `duration`, `meeting_link`, `is_closed`, `meeting_id`) VALUES
-(29, 123, 'hello', '2023-11-02', '14:26:00', 20, 'http://google.demo.meet/123', 'false', 16998666464476),
-(30, 1234, 'hello', '2023-11-02', '14:26:00', 20, 'http://google.demo.meet/123', 'false', 16998666464476),
-(31, 123, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
-(32, 1234, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
-(33, 12345, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
-(34, 1234, 'meeting for english class', '6788-05-04', '05:59:00', 55, 'http://google.demo.meet/12345', 'true', 16998667792342),
-(36, 123, 'dummy', '7899-05-24', '05:59:00', 59, 'http://google.demo.meet/5555', 'true', 16998675704436),
-(37, 1234, 'dummy', '7899-05-24', '05:59:00', 59, 'http://google.demo.meet/5555', 'true', 16998675704436);
 
 -- --------------------------------------------------------
 
@@ -98,11 +107,17 @@ INSERT INTO `users` (`user_id`, `password`, `email`, `role`, `first_name`, `last
 (123, '123', 'student1@gmail.com', 'student', 'student', '1', 0, NULL),
 (1234, '1234', 'test@gmail.com', 'student', 'test', '123', 0, NULL),
 (12345, '12345', 'testing@gmail.com', 'student', 'test', '12345', 0, NULL),
-(556644, '$2y$10$NhUZoMKlnZjAeMle4HbS2eryHih.CKa3xcfqA/3dckFvK4dEE5ohu', 'kmathavan018@gmail.com', 'faculty', 'madavan', 'maddy', 1, '2023-11-12 09:13:33');
+(556644, '$2y$10$v62II8/QDEGYoQa9Ue3bW.lGvxRIIfxV5utg76cschdIneRlzKdpu', 'kmathavan018@gmail.com', 'student', 'madavan', 'maddy', 1, '2023-11-12 09:13:33');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `forgot_otp`
+--
+ALTER TABLE `forgot_otp`
+  ADD PRIMARY KEY (`s_no`);
 
 --
 -- Indexes for table `rooms`
@@ -121,10 +136,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `forgot_otp`
+--
+ALTER TABLE `forgot_otp`
+  MODIFY `s_no` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
