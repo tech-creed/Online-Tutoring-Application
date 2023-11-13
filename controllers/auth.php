@@ -89,9 +89,9 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
         $expire_time = $data['expire_time'];
         if ($expire_time > $today_time) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $query = mysqli_query($conn,"UPDATE `users` SET `password`='$hashed_password' WHERE `email`='$email'");
-            $query = mysqli_query($conn,"DELETE FROM `forgot_otp` WHERE `otp` = '$otp'");
-            
+            $query = mysqli_query($conn, "UPDATE `users` SET `password`='$hashed_password' WHERE `email`='$email'");
+            $query = mysqli_query($conn, "DELETE FROM `forgot_otp` WHERE `otp` = '$otp'");
+
             header("Location:../pages/login.php");
         } else {
             echo $_SESSION['error'] = 'Otp Expired';
@@ -102,5 +102,13 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
         header("Location:../pages/forgot.php");
     }
     header("Location:../pages/forgot.php");
+}
+
+
+if (isset($_REQUEST['logout_btn'])) {
+    unset($_SESSION['sess_id']);
+    unset($_SESSION['my_id']);
+    unset($_SESSION['role']);
+    header("Location:../index.php");
 }
 ?>
