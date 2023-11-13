@@ -104,7 +104,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
     <!-- navbar -->
     <?php include("../../../templates/navbar.php") ?>
 
-    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student container mt-5">
+    <div class="col-md-5 tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student container mt-5" >
         <h2>Create Room</h2>
         <br>
         <!-- Room Creation Form -->

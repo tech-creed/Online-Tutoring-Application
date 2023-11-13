@@ -82,7 +82,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             </li>
             <li class="tutor-dashboard-menu-divider"></li>
             <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
-              <a href="../settings/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+              <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                 <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                   Settings </span>
               </a>

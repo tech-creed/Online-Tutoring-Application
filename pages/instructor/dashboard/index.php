@@ -31,6 +31,13 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
         border-radius: 10px;
         margin-bottom: 15px;
     }
+
+    .btn-group{
+        display:'block';
+    }
+    .btn-group a{
+        margin: 12px;
+    }
 </style>
 
 <body class="page-template-default page page-id-8 logged-in admin-bar no-customize-support wp-embed-responsive theme-edusion tutor-lms tutor-screen-frontend-dashboard woocommerce-no-js elementor-default elementor-kit-7">
@@ -88,7 +95,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                         </li>
                         <li class="tutor-dashboard-menu-divider"></li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
-                            <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                                 <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Settings </span>
                             </a>

@@ -74,7 +74,7 @@ mysqli_close($conn);
                         </li>
                         <li class="tutor-dashboard-menu-divider"></li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
-                            <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                                 <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Settings </span>
                             </a>
