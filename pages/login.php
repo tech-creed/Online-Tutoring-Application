@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -70,11 +73,10 @@
                   <form role="form" action="../controllers/auth.php" method="post" class="row g-3 needs-validation">
 
                     <div class="col-12">
-                      <label for="ID" class="form-label">Faculty ID</label>
+                      <label for="ID" class="form-label">Email ID</label>
                       <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="userID" class="form-control" id="ID" required>
-                        <div class="invalid-feedback">Please enter your Faculty ID</div>
+                        <input type="email" name="email" class="form-control" id="ID" required>
+                        <div class="invalid-feedback">Please enter your Email ID</div>
                       </div>
                     </div>
 
@@ -83,8 +85,8 @@
                       <div class="input-group has-validation">
                         <select name="role" id="role" class="form-select" aria-label="select role">
                           <option selected="">Select role</option>
-                          <option value="faculty">faculty</option>
-                          <option value="admin">admin</option>
+                          <option value="student">Student</option>
+                          <option value="instructor">Instructor</option>
                         </select>
                       </div>
                     </div>
@@ -99,7 +101,7 @@
                     </div>
                     <div class="col-12">
                       <button class="btn btn-primary w-100" style="background-color: #5fcf80; border: #5fcf80;"
-                        name="submit" type="submit">Login</button>
+                        name="login_btn" type="submit">Login</button>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Don't have account? <a href="register.php">Create an account</a></p>

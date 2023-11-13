@@ -15,6 +15,7 @@ function check_email($email_id)
     return true;
 }
 
+
 function sendMail($name,$email, $userId, $v_code)
 {
     require("PHPMailer/PHPMailer.php");
