@@ -112,6 +112,26 @@ include('../../../controllers/connect.php');
                             unset($_SESSION['error']);
                         }
                         ?>
+                        <?php
+                        // Count total students
+                        $countStudentsQuery = "SELECT COUNT(*) AS total_students FROM users WHERE role = 'student'";
+                        $resultStudents = mysqli_query($conn, $countStudentsQuery);
+                        $rowStudents = mysqli_fetch_assoc($resultStudents);
+                        $totalStudents = $rowStudents['total_students'];
+
+
+                        // Count total rooms
+                        $countRoomsQuery = "SELECT COUNT(DISTINCT meeting_id) AS total_rooms FROM rooms";
+                        $resultRooms = mysqli_query($conn, $countRoomsQuery);
+                        $rowRooms = mysqli_fetch_assoc($resultRooms);
+                        $totalRooms = $rowRooms['total_rooms'];
+
+                        // Count total active rooms
+                        $countActiveRoomsQuery = "SELECT COUNT(DISTINCT meeting_id) AS total_active_rooms FROM rooms WHERE is_closed = 'false'";
+                        $resultActiveRooms = mysqli_query($conn, $countActiveRoomsQuery);
+                        $rowActiveRooms = mysqli_fetch_assoc($resultActiveRooms);
+                        $totalActiveRooms = $rowActiveRooms['total_active_rooms'];
+                        ?>
                         <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-capitalize-text tutor-mb-24 tutor-dashboard-title">Dashboard</div>
                         <div class="tutor-dashboard-content-inner">
                             <div class="tutor-row tutor-gx-lg-4">
@@ -121,9 +141,9 @@ include('../../../controllers/connect.php');
                                             <span class="tutor-round-box tutor-mr-12 tutor-mr-lg-0 tutor-mb-lg-12">
                                                 <i class="tutor-icon-user-graduate" area-hidden="true"></i>
                                             </span>
-                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block">0</div>
+                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block"><?php echo $totalStudents; ?></div>
                                             <div class="tutor-fs-7 tutor-color-secondary">Total Students</div>
-                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto">0</div>
+                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto"><?php echo $totalStudents; ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,9 +154,9 @@ include('../../../controllers/connect.php');
                                             <span class="tutor-round-box tutor-mr-12 tutor-mr-lg-0 tutor-mb-lg-12">
                                                 <i class="tutor-icon-box-open" area-hidden="true"></i>
                                             </span>
-                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block">0</div>
+                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block"><?php echo $totalRooms; ?></div>
                                             <div class="tutor-fs-7 tutor-color-secondary">Total Rooms</div>
-                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto">0</div>
+                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto"><?php echo $totalRooms; ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -145,11 +165,11 @@ include('../../../controllers/connect.php');
                                     <div class="tutor-card">
                                         <div class="tutor-d-flex tutor-flex-lg-column tutor-align-center tutor-text-lg-center tutor-px-12 tutor-px-lg-24 tutor-py-8 tutor-py-lg-32">
                                             <span class="tutor-round-box tutor-mr-12 tutor-mr-lg-0 tutor-mb-lg-12">
-                                                <i class="tutor-icon-coins" area-hidden="true"></i>
+                                            <i class="tutor-icon-mortarboard-o" area-hidden="true"></i>
                                             </span>
-                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>0</span></div>
+                                            <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block"><?php echo $totalActiveRooms; ?></div>
                                             <div class="tutor-fs-7 tutor-color-secondary">Total Active Rooms</div>
-                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto"><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&#036;</span>0</span></div>
+                                            <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto"><?php echo $totalActiveRooms; ?></div>
                                         </div>
                                     </div>
                                 </div>
@@ -166,8 +186,6 @@ include('../../../controllers/connect.php');
 
                     $activeRooms = mysqli_fetch_all($resultActiveRooms, MYSQLI_ASSOC);
                     $closedRooms = mysqli_fetch_all($resultClosedRooms, MYSQLI_ASSOC);
-
-                    mysqli_close($conn);
                     ?>
                     <div class="tutor-dashboard-content">
                         <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-mb-16 tutor-capitalize-text">Classrooms</div>
@@ -186,6 +204,12 @@ include('../../../controllers/connect.php');
                                     <div class="tab-pane fade show active" id="activeRoomsContent" role="tabpanel" aria-labelledby="activeRoomsTab">
                                         <?php
                                         foreach ($activeRooms as $room) {
+                                            $meeting_id = $room['meeting_id'];
+                                            $countQuery = "SELECT COUNT(student_id) AS student_count FROM rooms WHERE meeting_id = '$meeting_id'";
+                                            $result = mysqli_query($conn, $countQuery);
+                                            $row = mysqli_fetch_assoc($result);
+                                            $studentCount = $row['student_count'];
+
                                             echo '<div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
@@ -193,7 +217,8 @@ include('../../../controllers/connect.php');
                                                         <h5 class="card-title">Meeting Title: ' . $room['meeting_title'] . '</h5>
                                                         <p class="card-text">Date: ' . $room['date'] . '</p>
                                                         <p class="card-text">Time: ' . $room['time'] . '</p>
-                                                        
+                                                        <p class="card-text">Duration: ' . $room['duration'] . ' Mins' . '</p>
+                                                        <p class="card-text">student count: ' . $studentCount . '</p>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-8 d-flex align-items-center justify-content-center">
@@ -202,7 +227,7 @@ include('../../../controllers/connect.php');
                         <a href="../class/editRoom.php?meeting_id=' . $room['meeting_id'] . '" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Edit Room</a>
                         <a href="../../../controllers/instructor/deleteRoom.php?meeting_id=' . $room['meeting_id'] . '" class="btn btn-danger"><i class="fa-sharp fa-solid fa-trash-can"></i> Delete Room</a>
                         <a href="' . $room['meeting_link'] . '" class="btn btn-primary"><i class="fa-solid fa-chalkboard" style="color: #f40b0b;"></i> Take Class</a>
-                        <a href="' . $room['meeting_link'] . '" class="btn btn-warning"><i class="fa-solid fa-xmark" style="color: #f40b0b;"></i> Close</a>
+                        <a href="../../../controllers/instructor/closeRoom.php?meeting_id=' . $room['meeting_id'] . '"  class="btn btn-warning"><i class="fa-solid fa-xmark" style="color: #f40b0b;"></i> Close</a>
                         </div>
                 </div>
                                             </div>
@@ -225,9 +250,11 @@ include('../../../controllers/connect.php');
                                                         
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 d-flex align-items-center justify-content-center">
-                                                <p class="card-text">student count: ' . $room['date'] . '</p>
-                                                <p class="card-text">duration: ' . $room['date'] . '</p>
+                                                <div class="col-md-6">
+                                                    <div class="card-body"> 
+                                                        <p class="card-text">Duration: ' . $room['duration'] . ' Mins' . '</p>
+                                                        <p class="card-text">student count: ' . $studentCount . '</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                           </div>';
