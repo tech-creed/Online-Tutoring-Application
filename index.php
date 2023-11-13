@@ -107,18 +107,17 @@
             <img src="../assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+            <h3>Our Approach to Learning</h3>
             <p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            At [Your Website Name], we believe in a holistic approach to education that goes beyond traditional boundaries. Here's what sets us apart:
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-              <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-              <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              <li><i class="bi bi-check-circle"></i> Our approach is centered around understanding individual learning styles and adapting our methods to ensure a personalized and effective learning experience..</li>
+              <li><i class="bi bi-check-circle"></i> Engage in real-time discussions, collaborative projects, and interactive lessons that bring the learning material to life..</li>
+              <li><i class="bi bi-check-circle"></i>  Receive timely feedback and assessments to track your progress and identify areas for growth, ensuring a dynamic and evolving learning experience..</li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            Discover a new dimension of learning at [Your Website Name]. Our approach is designed to inspire, engage, and empower you on your educational journey. Welcome to an educational experience that transcends boundaries and unlocks the full potential of every learner.
             </p>
 
           </div>
@@ -290,7 +289,7 @@
     <!--End Features Section -->
 
     <!-- ======= Popular Courses Section ======= -->
-    <!-- <section id="popular-courses" class="courses">
+    <section id="popular-courses" class="courses">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -305,13 +304,13 @@
               <img src="../assets/img/course-1.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Web Development</h4>
-                  <p class="price">$169</p>
+                  <h4>Exam Preparation</h4>
+                  <!-- <p class="price">$169</p> -->
                 </div>
 
-                <h3><a href="course-details.html">Website Design</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
+                <h3><a href="course-details.html">IELTS</a></h3>
+                <p>Unlock your path to global opportunities with our IELTS course. Expert guidance, tailored strategies, and comprehensive practice materials prepare you to excel in the exam. Elevate your language proficiency and confidently pursue your dreams with our IELTS success program</p>
+                <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
                     <span>Antonio</span>
@@ -321,7 +320,7 @@
                     &nbsp;&nbsp;
                     <i class="bx bx-heart"></i>&nbsp;65
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div> 
@@ -331,13 +330,13 @@
               <img src="../assets/img/course-2.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Marketing</h4>
-                  <p class="price">$250</p>
+                  <h4>Acadamic Excellence</h4>
+                  <!-- <p class="price">$250</p> -->
                 </div>
 
-                <h3><a href="course-details.html">Search Engine Optimization</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
+                <h3><a href="course-details.html">Academic English</a></h3>
+                <p>Boost your academic skills with our Academic English course. Tailored for success, it hones your reading, writing, and communication. Unleash your academic potential with us!</p>
+                <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
                     <span>Lana</span>
@@ -347,7 +346,7 @@
                     &nbsp;&nbsp;
                     <i class="bx bx-heart"></i>&nbsp;42
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div> 
@@ -357,13 +356,13 @@
               <img src="../assets/img/course-3.jpg" class="img-fluid" alt="...">
               <div class="course-content">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <h4>Content</h4>
-                  <p class="price">$180</p>
+                  <h4>Exam Preparation</h4>
+                  <!-- <p class="price">$180</p> -->
                 </div>
 
-                <h3><a href="course-details.html">Copywriting</a></h3>
-                <p>Et architecto provident deleniti facere repellat nobis iste. Id facere quia quae dolores dolorem tempore.</p>
-                <div class="trainer d-flex justify-content-between align-items-center">
+                <h3><a href="course-details.html">OET</a></h3>
+                <p>Master medical English with our OET course. Tailored for professionals, it's your key to career advancement. Elevate your language skills for success!</p>
+                <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
                     <span>Brandon</span>
@@ -373,7 +372,7 @@
                     &nbsp;&nbsp;
                     <i class="bx bx-heart"></i>&nbsp;85
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div> 
@@ -381,7 +380,7 @@
         </div>
 
       </div>
-    </section> -->
+    </section>
 
     <!-- ======= Trainers Section ======= -->
     <!-- <section id="trainers" class="trainers">
@@ -460,12 +459,12 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Mentor</h3>
+            <h3>Website Name</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
               United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Phone:</strong> +1 010101 01010 010<br>
               <strong>Email:</strong> info@example.com<br>
             </p>
           </div>
@@ -475,29 +474,24 @@
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Our Courses</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>Our Courses</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">IELTS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Academic English</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">OET</a></li>
             </ul>
           </div>
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
+            <h4>Join Us</h4>
+            
+            <p>Join us in shaping a brighter future through education. Discover a world of knowledge and possibilities.</p>
+            <a href="/pages/register.php" class="get-started-btn" style="margin:0;width:100%;text-align:center">Join Us</a>
           </div>
 
         </div>
@@ -508,14 +502,14 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>[ Website Name ]</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           <!-- All the links in the footer should remain intact. -->
           <!-- You can delete the links only if you purchased the pro version. -->
           <!-- Licensing information: https://bootstrapmade.com/license/ -->
           <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          Designed & Developed by <a href="" style="color:tomato;font-weight:700">Tech Creed</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">
