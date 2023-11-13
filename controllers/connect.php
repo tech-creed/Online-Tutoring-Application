@@ -5,6 +5,11 @@
     $db_pass = "";
     $db_name = "tuts_db";
 
+    // $db_host = "localhost";
+    // $db_user = "id21543369_techceed";
+    // $db_pass = "TechCreed_01";
+    // $db_name = "id21543369_tuts_db";
+
     $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
     if(mysqli_connect_error())
     {
