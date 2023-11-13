@@ -215,7 +215,7 @@
   </div>
 
   <!-- footer -->
-  <?php include("../../../templates/footer2.php") ?>
+  <?php include("../../../templates/footer.php") ?>
 
 </body>
 
