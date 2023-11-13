@@ -142,9 +142,11 @@ include('../../../controllers/connect.php');
                     <label for="meetingLink">Meeting Link:</label>
                     <input type="text" class="form-control" id="meetingLink" name="meetingLink" value="<?php echo $room['meeting_link']; ?>">
                 </div>
+                <input type="hidden" name="meetingId" value="<?php echo $meeting_id; ?>">
+
                 <div class="form-group col-8">
                     <label for="studentId">Select Student:</label>
-                    <select class="form-control" id="studentId" name="studentId" required>
+                    <select class="form-control" id="studentId" name="studentId">
                         <option value="" selected disabled>Select a student</option>
                         <?php
                         $query = "SELECT user_id, first_name, last_name FROM users WHERE role = 'student'";
