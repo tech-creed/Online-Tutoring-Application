@@ -7,6 +7,7 @@ include('../../../controllers/connect.php');
 <html lang="en">
 
 <?php include("../../../templates/head_tag.php") ?>
+
 <script src="https://kit.fontawesome.com/5fe2f4c2ef.js" crossorigin="anonymous"></script>
 <style>
     #enrolledCoursesTabs .nav-link {
@@ -31,7 +32,7 @@ include('../../../controllers/connect.php');
     <?php include("../../../templates/navbar.php") ?>
 
 
-    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student tutor-pb-80">
+    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student">
         <div class="tutor-container">
             <div class="tutor-row tutor-d-flex tutor-justify-between tutor-frontend-dashboard-header">
                 <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none;">
@@ -270,7 +271,7 @@ include('../../../controllers/connect.php');
             </div>
         </div>
         <!-- footer -->
-        <?php include("../../../templates/footer2.php") ?>
+        <?php include("../../../templates/footer.php") ?>
 </body>
 
 </html>

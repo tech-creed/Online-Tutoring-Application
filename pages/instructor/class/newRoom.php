@@ -98,7 +98,7 @@ include('../../../controllers/connect.php');
     <!-- navbar -->
     <?php include("../../../templates/navbar.php") ?>
 
-    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student tutor-pb-80 container mt-5">
+    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student container mt-5">
         <h2>Create Room</h2>
         <br>
         <!-- Room Creation Form -->
