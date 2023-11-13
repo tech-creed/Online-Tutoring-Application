@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../../../controllers/connect.php');
-$query = "SELECT user_id, username, email, first_name, last_name FROM users WHERE role = 'student'";
+$query = "SELECT user_id, reg_date, email, first_name, last_name FROM users WHERE role = 'student'";
 $result = mysqli_query($conn, $query);
 
 mysqli_close($conn);
@@ -90,20 +90,20 @@ mysqli_close($conn);
                                     <thead>
                                         <tr>
                                             <th>Student ID</th>
-                                            <th>Username</th>
-                                            <th>Email</th>
                                             <th>First Name</th>
                                             <th>Last Name</th>
+                                            <th>Email</th>
+                                            <th>Registered Date</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php while ($student = mysqli_fetch_assoc($result)) : ?>
                                             <tr>
                                                 <td><?php echo $student['user_id']; ?></td>
-                                                <td><?php echo $student['username']; ?></td>
-                                                <td><?php echo $student['email']; ?></td>
                                                 <td><?php echo $student['first_name']; ?></td>
                                                 <td><?php echo $student['last_name']; ?></td>
+                                                <td><?php echo $student['email']; ?></td>
+                                                <td><?php echo $student['reg_date']; ?></td>                                            
                                             </tr>
                                         <?php endwhile; ?>
                                     </tbody>
