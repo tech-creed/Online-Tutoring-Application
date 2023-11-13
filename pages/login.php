@@ -14,7 +14,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,14 +55,14 @@
 
                   <?php
                   if (isset($_SESSION['error'])) {
-                  ?>
+                    ?>
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                       <?php
                       echo $_SESSION['error'];
-                      ?>sasfas
+                      ?>
                       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                     </div>
-                  <?php
+                    <?php
                     unset($_SESSION['error']);
                   }
                   ?>
@@ -93,7 +95,14 @@
                       <div class="invalid-feedback">Please enter your password</div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" style="background-color: #5fcf80; border: #5fcf80;" name="submit" type="submit">Login</button>
+                      <p class="small mb-0"><a href="forgot.php">Forgot Password</a></p>
+                    </div>
+                    <div class="col-12">
+                      <button class="btn btn-primary w-100" style="background-color: #5fcf80; border: #5fcf80;"
+                        name="submit" type="submit">Login</button>
+                    </div>
+                    <div class="col-12">
+                      <p class="small mb-0">Don't have account? <a href="register.php">Create an account</a></p>
                     </div>
                   </form>
 
@@ -107,7 +116,8 @@
     </div>
   </main><!-- End #main -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
