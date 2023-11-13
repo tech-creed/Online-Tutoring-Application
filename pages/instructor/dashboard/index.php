@@ -185,7 +185,7 @@ include('../../../controllers/connect.php');
                                                 <div class="col-md-6 d-flex align-items-center justify-content-center">
                     <div class="btn-group" role="group">
                     <a href="' . $room['meeting_link'] . '" class="btn btn-primary"><i class="fa-solid fa-chalkboard" style="color: #f40b0b;"></i> Take Class</a>
-                        <a href="#" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Edit Room</a>
+                        <a href="../class/editRoom.php?meeting_id='.$room['meeting_id'].'" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Edit Room</a>
                         <a href="#" class="btn btn-danger"><i class="fa-sharp fa-solid fa-trash-can"></i> Delete Room</a>
                     </div>
                 </div>
