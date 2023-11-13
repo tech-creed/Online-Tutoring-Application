@@ -24,6 +24,7 @@ if (isset($_REQUEST['register_btn'])) {
             $d = mysqli_query($conn, "INSERT INTO `users`(`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES ('$user_id','$hashed_password','$email','$role','$fname','$lname','0','$reg_date')");
             $a = mysqli_query($conn, "INSERT INTO `email_verify`(`email`, `verification_code`) VALUES ('$email','$v_code')");
             if ($d && sendMail($fname, $email, $user_id, $v_code)) {
+                session_unset();
                 $_SESSION['reg'] = true;
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['email'] = $email;
@@ -50,9 +51,11 @@ if (isset($_REQUEST['login_btn'])) {
             $_SESSION['error'] = 'Please Verify Your Email';
             header("Location:../pages/login.php");
         } elseif (password_verify($password, $data["password"])) {
+            session_unset();
             $_SESSION['sess_id'] = session_id();
             $_SESSION['user_id'] = $user_id;
             $_SESSION['role'] = $role;
+            $_SESSION['name'] = $data['first_name'] . ' ' . $data['last_name'];
             if ($role == 'student') {
                 header("Location:../pages/student/dashboard/");
             } elseif ($role == "instructor") {
@@ -75,6 +78,7 @@ if (isset($_REQUEST['forgot_btn'])) {
         $otp_expire = date("Y-m-d h:i:s", strtotime("+10 minutes"));
         $data = mysqli_query($conn, "INSERT INTO `forgot_otp`(`email`, `otp`, `expire_time`) VALUES ('$email','$otp','$otp_expire')");
         if ($data && otpSend($email, $otp)) {
+            session_unset();
             $_SESSION['email'] = $email;
             $_SESSION['status'] = "Mail Send Successfully";
             header("Location: ../pages/forgot.php");
@@ -121,6 +125,7 @@ if (isset($_REQUEST['change_password'])) {
         if ($password == $passwordre) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $data = mysqli_query($conn, "UPDATE `faculty` SET `password`='$hashed_password' WHERE `facultyID`='$faculty_id'");
+            
             $_SESSION['status'] = 'Updated';
             header("Location:../pages/");
         } else {

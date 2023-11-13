@@ -55,7 +55,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 Hello,
               </div>
               <div class="tutor-fs-4 tutor-fw-medium tutor-dashboard-header-username">
-                David Ryan
+                <?php echo $_SESSION['name']?>
               </div>
             </div>
           </div>
@@ -97,7 +97,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
         </div>
 
         <?php
-        $studentId = 123;
+        $studentId = $user_id;
 
         // Fetch total Enrolled Courses
         $queryEnrolledCourses = "SELECT COUNT(*) AS total_enrolled FROM rooms WHERE student_id = $studentId";
@@ -184,11 +184,9 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 </div>
 
                 <?php
-                ///////////////////////
-                $userID = 123;
 
-                $queryActiveRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'false' AND student_id = '$userID'";
-                $queryClosedRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'true' AND student_id = '$userID'";
+                $queryActiveRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'false' AND student_id = '$user_id'";
+                $queryClosedRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'true' AND student_id = '$user_id'";
 
                 $resultActiveRooms = mysqli_query($conn, $queryActiveRooms);
                 $resultClosedRooms = mysqli_query($conn, $queryClosedRooms);

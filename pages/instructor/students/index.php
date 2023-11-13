@@ -2,6 +2,13 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../../../controllers/connect.php');
+if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
+    $user_id = $_SESSION['user_id'];
+    $role = $_SESSION['role'];
+}else{
+    header("Location: ../../login.php");
+}
+
 $query = "SELECT user_id, reg_date, email, first_name, last_name FROM users WHERE role = 'student'";
 $result = mysqli_query($conn, $query);
 
@@ -29,7 +36,7 @@ mysqli_close($conn);
 
                     <div class="tutor-user-info tutor-ml-24">
                         <div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
-                            Kenneth Renteria </div>
+                        <?php echo $_SESSION['name']?> </div>
                         <div class="tutor-dashboard-header-stats">
                             <div class="tutor-dashboard-header-ratings">
                                 <div class="tutor-ratings tutor-ratings-">

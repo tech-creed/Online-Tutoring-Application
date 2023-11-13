@@ -2,6 +2,12 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../../../controllers/connect.php');
+if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
+        $user_id = $_SESSION['user_id'];
+        $role = $_SESSION['role'];
+    }else{
+        header("Location: ../../login.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +50,7 @@ include('../../../controllers/connect.php');
 
                     <div class="tutor-user-info tutor-ml-24">
                         <div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
-                            Kenneth Renteria </div>
+                        <?php echo $_SESSION['name']?> </div>
                         <div class="tutor-dashboard-header-stats">
                             <div class="tutor-dashboard-header-ratings">
                                 <div class="tutor-ratings tutor-ratings-">
@@ -241,6 +247,11 @@ include('../../../controllers/connect.php');
                                     <div class="tab-pane fade" id="closedRoomsContent" role="tabpanel" aria-labelledby="closedRoomsTab">
                                         <?php
                                         foreach ($closedRooms as $room) {
+                                            $meeting_id = $room['meeting_id'];
+                                            $countQuery = "SELECT COUNT(student_id) AS student_count FROM rooms WHERE meeting_id = '$meeting_id'";
+                                            $result = mysqli_query($conn, $countQuery);
+                                            $row = mysqli_fetch_assoc($result);
+                                            $studentCount = $row['student_count'];
                                             echo '<div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-6">
