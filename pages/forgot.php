@@ -102,11 +102,6 @@ session_start();
                     </div>
 
                     <div class="col-12">
-                      <label for="cpassword" class="form-label">Confirm Password</label>
-                      <input type="password" name="cpassword" class="form-control" id="password" required>
-                      <div class="invalid-feedback">Please enter your password</div>
-                    </div>
-                    <div class="col-12">
                       <button class="btn btn-primary w-100" style="background-color: #5fcf80; border: #5fcf80;"
                         name="forgot_verify_btn" type="submit">Submit</button>
                     </div>

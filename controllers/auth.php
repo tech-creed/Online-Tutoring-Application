@@ -85,23 +85,22 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
     $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
     $data = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `forgot_otp` WHERE `otp` = '$otp'"));
     if ($data['email'] == $email) {
-        echo $today_time = date("Y-m-d h:i:sa");
-        echo $expire_time = $data['expire_time'];
-        if ($expire_time < $today_time) {
+        $today_time = date("Y-m-d h:i:sa");
+        $expire_time = $data['expire_time'];
+        if ($expire_time > $today_time) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $query = mysqli_query($conn,"UPDATE `users` SET `password`='$hashed_password' WHERE `email`='$email'");
             $query = mysqli_query($conn,"DELETE FROM `forgot_otp` WHERE `otp` = '$otp'");
             
             header("Location:../pages/login.php");
         } else {
-            $_SESSION['error'] = 'Otp Expired';
+            echo $_SESSION['error'] = 'Otp Expired';
             header("Location:../pages/forgot.php");
         }
     } else {
-        $_SESSION['error'] = 'Invalid';
+        echo $_SESSION['error'] = 'Invalid';
         header("Location:../pages/forgot.php");
     }
-    $_SESSION['error'] = 'something went wrong';
     header("Location:../pages/forgot.php");
 }
 ?>
