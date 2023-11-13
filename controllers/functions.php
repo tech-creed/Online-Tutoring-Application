@@ -15,6 +15,17 @@ function check_email($email_id)
     return true;
 }
 
+function check_id($id)
+{
+    global $conn;
+    $data = mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id` = '$id'");
+    // $data = mysqli_num_rows($data);
+    if (mysqli_num_rows($data) == 1) {
+        return true;
+    }
+    return false;
+}
+
 
 function sendMail($name,$email, $userId, $v_code)
 {

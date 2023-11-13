@@ -17,6 +17,9 @@ if (isset($_REQUEST['register_btn'])) {
         if (check_email($email)) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $user_id = rand("100000", "999999");
+            while (check_id($user_id)) {
+                $user_id = rand("100000", "999999");
+            }
             $reg_date = date("Y-m-d h:i:sa");
             $d = mysqli_query($conn, "INSERT INTO `users`(`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES ('$user_id','$hashed_password','$email','$role','$fname','$lname','0','$reg_date')");
             $a = mysqli_query($conn, "INSERT INTO `email_verify`(`email`, `verification_code`) VALUES ('$email','$v_code')");
@@ -50,7 +53,11 @@ if (isset($_REQUEST['login_btn'])) {
             $_SESSION['sess_id'] = session_id();
             $_SESSION['my_id'] = $user_id;
             $_SESSION['role'] = $role;
-            header("Location:../pages/dashboard.php");
+            if ($role == 'student') {
+                header("Location:../pages/student/dashboard/");
+            } elseif ($role == "instructor") {
+                header("Location:../pages/instructor/dashboard/");
+            }
         } else {
             $_SESSION['error'] = "Password Incorrect";
             header("Location:../pages/login.php");
@@ -110,5 +117,27 @@ if (isset($_REQUEST['logout_btn'])) {
     unset($_SESSION['my_id']);
     unset($_SESSION['role']);
     header("Location:../index.php");
+}
+
+if (isset($_REQUEST['change_password'])) {
+    $user_id = mysqli_real_escape_string($conn, $_REQUEST['faculty_id']);
+    $old_pass = mysqli_real_escape_string($conn, $_REQUEST['old_pass']);
+    $password = mysqli_real_escape_string($conn, $_REQUEST['newpassword']);
+    $passwordre = mysqli_real_escape_string($conn, $_REQUEST['renewpassword']);
+    $user = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id`='$user_id'"));
+    if (password_verify($old_pass, $user['password'])) {
+        if ($password == $passwordre) {
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+            $data = mysqli_query($conn, "UPDATE `faculty` SET `password`='$hashed_password' WHERE `facultyID`='$faculty_id'");
+            $_SESSION['status'] = 'Updated';
+            header("Location:../pages/");
+        } else {
+            $_SESSION['status'] = "Password Doesn't Match";
+            header("Location:../pages/");
+        }
+    } else {
+        $_SESSION['status'] = 'Password Incorrect';
+        header("Location:../pages/");
+    }
 }
 ?>

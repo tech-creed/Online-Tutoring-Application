@@ -52,7 +52,7 @@ session_start();
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Online Tutoring</h5>
+                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Online Tutoring</h5>
                     <p class="text-center small">Online Tutoring</p>
                   </div>
 
