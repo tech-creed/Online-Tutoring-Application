@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 13, 2023 at 05:10 AM
+-- Host: localhost
+-- Generation Time: Nov 13, 2023 at 11:29 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -52,11 +52,26 @@ CREATE TABLE `rooms` (
   `student_id` int(12) NOT NULL,
   `meeting_title` varchar(255) NOT NULL,
   `date` date NOT NULL,
-  `time` time NOT NULL,
+  `time` varchar(255) NOT NULL,
   `duration` int(12) NOT NULL,
   `meeting_link` varchar(535) NOT NULL,
-  `is_closed` varchar(255) NOT NULL
+  `is_closed` varchar(255) NOT NULL,
+  `meeting_id` bigint(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rooms`
+--
+
+INSERT INTO `rooms` (`id`, `student_id`, `meeting_title`, `date`, `time`, `duration`, `meeting_link`, `is_closed`, `meeting_id`) VALUES
+(29, 123, 'hello', '2023-11-02', '14:26:00', 20, 'http://google.demo.meet/123', 'false', 16998666464476),
+(30, 1234, 'hello', '2023-11-02', '14:26:00', 20, 'http://google.demo.meet/123', 'false', 16998666464476),
+(31, 123, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
+(32, 1234, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
+(33, 12345, 'hello123', '5555-04-23', '05:55:00', 50, 'http://google.demo.meet/5555', 'false', 16998666984943),
+(34, 1234, 'meeting for english class', '6788-05-04', '05:59:00', 55, 'http://google.demo.meet/12345', 'true', 16998667792342),
+(36, 123, 'dummy', '7899-05-24', '05:59:00', 59, 'http://google.demo.meet/5555', 'true', 16998675704436),
+(37, 1234, 'dummy', '7899-05-24', '05:59:00', 59, 'http://google.demo.meet/5555', 'true', 16998675704436);
 
 -- --------------------------------------------------------
 
@@ -109,7 +124,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `users`
