@@ -1,5 +1,12 @@
 <?php
 session_start();
+if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
+  if ($_SESSION['role'] == 'student') {
+    header("Location:./student/dashboard/");
+  } elseif ($_SESSION['role'] == "instructor") {
+    header("Location:./instructor/dashboard/");
+  }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
