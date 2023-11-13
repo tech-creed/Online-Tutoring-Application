@@ -97,7 +97,21 @@ include('../../../controllers/connect.php');
 
                 <div class="tutor-col-12 tutor-col-md-8 tutor-col-lg-9">
                     <div class="tutor-dashboard-content">
-
+                        <?php
+                        if (isset($_SESSION['success'])) {
+                            echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            ' . $_SESSION['success'] . '
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+                            unset($_SESSION['success']);
+                        } elseif (isset($_SESSION['error'])) {
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            ' . $_SESSION['error'] . '
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+                            unset($_SESSION['error']);
+                        }
+                        ?>
                         <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-capitalize-text tutor-mb-24 tutor-dashboard-title">Dashboard</div>
                         <div class="tutor-dashboard-content-inner">
                             <div class="tutor-row tutor-gx-lg-4">
@@ -144,17 +158,17 @@ include('../../../controllers/connect.php');
                     </div>
 
                     <?php
-                    $queryActiveRooms = "SELECT * FROM rooms WHERE is_closed = 'false'";
-                    $queryClosedRooms = "SELECT * FROM rooms WHERE is_closed = 'true'";
+                    $queryActiveRooms = "SELECT DISTINCT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'false'";
+                    $queryClosedRooms = "SELECT DISTINCT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'true'";
 
                     $resultActiveRooms = mysqli_query($conn, $queryActiveRooms);
                     $resultClosedRooms = mysqli_query($conn, $queryClosedRooms);
 
                     $activeRooms = mysqli_fetch_all($resultActiveRooms, MYSQLI_ASSOC);
                     $closedRooms = mysqli_fetch_all($resultClosedRooms, MYSQLI_ASSOC);
+
                     mysqli_close($conn);
                     ?>
-
                     <div class="tutor-dashboard-content">
                         <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-mb-16 tutor-capitalize-text">Classrooms</div>
                         <div class="tutor-dashboard-content-inner enrolled-courses">
@@ -174,7 +188,7 @@ include('../../../controllers/connect.php');
                                         foreach ($activeRooms as $room) {
                                             echo '<div class="card mb-3">
                                             <div class="row g-0">
-                                                <div class="col-md-6">
+                                                <div class="col-md-4">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Meeting Title: ' . $room['meeting_title'] . '</h5>
                                                         <p class="card-text">Date: ' . $room['date'] . '</p>
@@ -182,12 +196,14 @@ include('../../../controllers/connect.php');
                                                         
                                                     </div>
                                                 </div>
-                                                <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                                <div class="col-md-8 d-flex align-items-center justify-content-center">
                     <div class="btn-group" role="group">
-                    <a href="' . $room['meeting_link'] . '" class="btn btn-primary"><i class="fa-solid fa-chalkboard" style="color: #f40b0b;"></i> Take Class</a>
-                        <a href="../class/editRoom.php?meeting_id='.$room['meeting_id'].'" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Edit Room</a>
-                        <a href="#" class="btn btn-danger"><i class="fa-sharp fa-solid fa-trash-can"></i> Delete Room</a>
-                    </div>
+                    
+                        <a href="../class/editRoom.php?meeting_id=' . $room['meeting_id'] . '" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i> Edit Room</a>
+                        <a href="../../../controllers/instructor/deleteRoom.php?meeting_id=' . $room['meeting_id'] . '" class="btn btn-danger"><i class="fa-sharp fa-solid fa-trash-can"></i> Delete Room</a>
+                        <a href="' . $room['meeting_link'] . '" class="btn btn-primary"><i class="fa-solid fa-chalkboard" style="color: #f40b0b;"></i> Take Class</a>
+                        <a href="' . $room['meeting_link'] . '" class="btn btn-warning"><i class="fa-solid fa-xmark" style="color: #f40b0b;"></i> Close</a>
+                        </div>
                 </div>
                                             </div>
                                           </div>';

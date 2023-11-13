@@ -102,6 +102,21 @@ include('../../../controllers/connect.php');
         <h2>Edit Room Details</h2>
         <br>
         <form action="../../../controllers/instructor/roomEdit.php" method="post" onsubmit="return disableSubmitButton()">
+        <?php
+                    if (isset($_SESSION['success'])) {
+                        echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            ' . $_SESSION['success'] . '
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+                        unset($_SESSION['success']);
+                    } elseif (isset($_SESSION['error'])) {
+                        echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+            ' . $_SESSION['error'] . '
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>';
+                        unset($_SESSION['error']);
+                    }
+                    ?>
             <div class="row"><?php
                                 $meeting_id = $_GET['meeting_id'] ?? null;
 

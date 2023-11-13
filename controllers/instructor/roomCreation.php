@@ -13,13 +13,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $meetingLink = $_POST['meetingLink'];
     $selectedStudentIds = json_decode($_POST['selectedStudentIds'], true);
 
-    $insertClassQuery = "INSERT INTO rooms (student_id, meeting_title, date, time, duration, meeting_link, is_closed) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    function generateMeetingId() {
+        $timestamp = time();
+        $randomNumber = rand(1000, 9999);
+        $meetingId = $timestamp . $randomNumber;
+    
+        return $meetingId;
+    }
+    
+    $newMeetingId = generateMeetingId();
+
+    $insertClassQuery = "INSERT INTO rooms (student_id, meeting_title, date, time, duration, meeting_link,meeting_id, is_closed) VALUES (?,?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $insertClassQuery);
 
     if ($stmt) {
         $isClosed = 'false';
         foreach ($selectedStudentIds as $studentId) {
-            mysqli_stmt_bind_param($stmt, "issssss", $studentId, $meetingTitle, $date, $time, $duration, $meetingLink, $isClosed);
+            mysqli_stmt_bind_param($stmt, "isssssis", $studentId, $meetingTitle, $date, $time, $duration, $meetingLink,$newMeetingId, $isClosed);
             mysqli_stmt_execute($stmt);
         }
 
