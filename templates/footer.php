@@ -1,7 +1,7 @@
-<footer id="footer" style="margin-top:64px">
+<footer id="footer" style="margin-top:64px; background-color:#1a2d62;">
     <div class="container d-md-flex py-4">
 
-      <div class="me-md-auto text-center text-md-start">
+      <div style="color: #fff;" class="me-md-auto text-center text-md-start">
         <div class="copyright">
           &copy; Copyright <strong><span>[ Website Name ]</span></strong>. All Rights Reserved
         </div>

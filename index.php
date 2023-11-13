@@ -444,9 +444,9 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <footer id="footer" style="background-color:#1a2d62;">
 
-    <div class="footer-top">
+    <div class="footer-top" style="background-color:#1a2d62;">
       <div class="container">
         <div class="row">
 
