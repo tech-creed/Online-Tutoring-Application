@@ -1,7 +1,7 @@
 <?php
-    if (isset($_SESSION['sess_id']) && isset($_SESSION['my_id']) && isset($_SESSION['role'])) 
+    if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) 
     {
-        $my_id = $_SESSION['my_id'];
+        $user_id = $_SESSION['user_id'];
         $role = $_SESSION['role'];
     }
     else

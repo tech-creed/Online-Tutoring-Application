@@ -1,5 +1,5 @@
 <?php
-
+ob_start();
 require_once("connect.php");
 require("functions.php");
 
@@ -13,14 +13,14 @@ if (isset($_REQUEST['register_btn'])) {
     $_SESSION['error'] = 'Select Your Role';
     if ($role != 'Select role') {
         $v_code = bin2hex(random_bytes(16));
-        $_SESSION['error'] = 'Email Already taken';
+        $_SESSION['error'] = 'Email Already Taken';
         if (check_email($email)) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             $user_id = rand("100000", "999999");
             while (check_id($user_id)) {
                 $user_id = rand("100000", "999999");
             }
-            $reg_date = date("Y-m-d h:i:sa");
+            $reg_date = date("Y-m-d h:i:s");
             $d = mysqli_query($conn, "INSERT INTO `users`(`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES ('$user_id','$hashed_password','$email','$role','$fname','$lname','0','$reg_date')");
             $a = mysqli_query($conn, "INSERT INTO `email_verify`(`email`, `verification_code`) VALUES ('$email','$v_code')");
             if ($d && sendMail($fname, $email, $user_id, $v_code)) {
@@ -42,7 +42,7 @@ if (isset($_REQUEST['login_btn'])) {
     $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
     if (!check_email($email)) {
         $data = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `users` WHERE `email` = '$email'"));
-        $email = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `email_verify` WHERE `email`='$email'"));
+        $user_id = $data['user_id'];
         if ($data['role'] != $role) {
             $_SESSION['error'] = 'Invalid Role';
             header("Location:../pages/login.php");
@@ -51,7 +51,7 @@ if (isset($_REQUEST['login_btn'])) {
             header("Location:../pages/login.php");
         } elseif (password_verify($password, $data["password"])) {
             $_SESSION['sess_id'] = session_id();
-            $_SESSION['my_id'] = $user_id;
+            $_SESSION['user_id'] = $user_id;
             $_SESSION['role'] = $role;
             if ($role == 'student') {
                 header("Location:../pages/student/dashboard/");
@@ -72,7 +72,7 @@ if (isset($_REQUEST['forgot_btn'])) {
     $email = mysqli_real_escape_string($conn, $_REQUEST['email']);
     if (!check_email($email)) {
         $otp = rand("100000", "999999");
-        $otp_expire = date("Y-m-d h:i:sa", strtotime("+10 minutes"));
+        $otp_expire = date("Y-m-d h:i:s", strtotime("+10 minutes"));
         $data = mysqli_query($conn, "INSERT INTO `forgot_otp`(`email`, `otp`, `expire_time`) VALUES ('$email','$otp','$otp_expire')");
         if ($data && otpSend($email, $otp)) {
             $_SESSION['email'] = $email;
@@ -92,7 +92,7 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
     $password = mysqli_real_escape_string($conn, $_REQUEST['password']);
     $data = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `forgot_otp` WHERE `otp` = '$otp'"));
     if ($data['email'] == $email) {
-        $today_time = date("Y-m-d h:i:sa");
+        $today_time = date("Y-m-d h:i:s");
         $expire_time = $data['expire_time'];
         if ($expire_time > $today_time) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
@@ -113,7 +113,7 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
 
 if (isset($_GET['logout_btn'])) {
     unset($_SESSION['sess_id']);
-    unset($_SESSION['my_id']);
+    unset($_SESSION['user_id']);
     unset($_SESSION['role']);
     header("Location:../index.php");
 }
@@ -139,4 +139,5 @@ if (isset($_REQUEST['change_password'])) {
         header("Location:../pages/");
     }
 }
+ob_end_clean();
 ?>

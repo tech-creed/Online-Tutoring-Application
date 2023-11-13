@@ -227,7 +227,6 @@ include('../../../controllers/connect.php');
 
             try {
                 var initialValue = document.getElementById('selectedStudentIds').value;
-                console.log(initialValue)
                 if (initialValue && initialValue.trim() !== '') {
                     selectedStudentIds = JSON.parse(initialValue);
                 }
@@ -246,7 +245,6 @@ include('../../../controllers/connect.php');
                 document.getElementById('selectedStudents').insertAdjacentHTML('beforeend', badge);
 
                 selectedStudentIds.push(studentId);
-                console.log(selectedStudentIds)
 
                 document.getElementById('selectedStudentIds').value = JSON.stringify(selectedStudentIds);
             }
@@ -259,8 +257,6 @@ include('../../../controllers/connect.php');
                     badgeToRemove.parentNode.removeChild(badgeToRemove);
                 }
                 selectedStudentIds = selectedStudentIds.filter(id => id !== studentId);
-
-                console.log(selectedStudentIds)
 
                 document.getElementById('selectedStudentIds').value = JSON.stringify(selectedStudentIds);
             };
