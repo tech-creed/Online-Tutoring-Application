@@ -2,8 +2,8 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Nov 11, 2023 at 12:42 PM
+-- Host: 127.0.0.1
+-- Generation Time: Nov 13, 2023 at 05:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,6 +20,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `tuts_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `email_verify`
+--
+
+CREATE TABLE `email_verify` (
+  `email` varchar(100) NOT NULL,
+  `verification_code` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `email_verify`
+--
+
+INSERT INTO `email_verify` (`email`, `verification_code`) VALUES
+('kmathavan018@gmail.com', '11a624a42f8afe17e3f7225c71d08478'),
+('kmathavan018@gmail.com', '7d67505b8b3b3c6f04ce866383685f35'),
+('kmathavan018@gmail.com', '4d29ac9e8f26e29cb986197777f621ba');
 
 -- --------------------------------------------------------
 
@@ -46,22 +66,24 @@ CREATE TABLE `rooms` (
 
 CREATE TABLE `users` (
   `user_id` int(12) NOT NULL,
-  `username` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
-  `last_name` varchar(255) NOT NULL
+  `last_name` varchar(255) NOT NULL,
+  `is_verified` tinyint(1) NOT NULL,
+  `reg_date` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `username`, `password`, `email`, `role`, `first_name`, `last_name`) VALUES
-(123, 'student1', '123', 'student1@gmail.com', 'student', 'student', '1'),
-(1234, 'stu2', '1234', 'test@gmail.com', 'student', 'test', '123'),
-(12345, 'student3', '12345', 'testing@gmail.com', 'student', 'test', '12345');
+INSERT INTO `users` (`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES
+(123, '123', 'student1@gmail.com', 'student', 'student', '1', 0, NULL),
+(1234, '1234', 'test@gmail.com', 'student', 'test', '123', 0, NULL),
+(12345, '12345', 'testing@gmail.com', 'student', 'test', '12345', 0, NULL),
+(556644, '$2y$10$NhUZoMKlnZjAeMle4HbS2eryHih.CKa3xcfqA/3dckFvK4dEE5ohu', 'kmathavan018@gmail.com', 'faculty', 'madavan', 'maddy', 1, '2023-11-12 09:13:33');
 
 --
 -- Indexes for dumped tables
@@ -93,7 +115,7 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12346;
+  MODIFY `user_id` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=991011;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
