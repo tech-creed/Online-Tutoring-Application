@@ -1,10 +1,32 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+include('../../../controllers/connect.php');
 
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <?php include("../../../templates/head_tag.php") ?>
+
+<script src="https://kit.fontawesome.com/5fe2f4c2ef.js" crossorigin="anonymous"></script>
+<style>
+  #enrolledCoursesTabs .nav-link {
+    background-color: #fff;
+    color: #2eca7f;
+  }
+
+  #enrolledCoursesTabs .nav-link.active {
+    background-color: #2eca7f;
+    color: #fff;
+  }
+
+  .card {
+    border: 1px solid #2eca7f;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+</style>
 
 <body class="page-template-default page page-id-8 logged-in wp-embed-responsive theme-edusion tutor-lms tutor-screen-frontend-dashboard woocommerce-no-js elementor-default elementor-kit-7">
   <!-- navbar -->
@@ -41,90 +63,55 @@
       <div class="tutor-row tutor-frontend-dashboard-maincontent">
         <div class="tutor-col-12 tutor-col-md-4 tutor-col-lg-3 tutor-dashboard-left-menu">
           <ul class="tutor-dashboard-permalinks">
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-index active">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-dashboard tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Dashboard
-                </span>
+            <li class='tutor-dashboard-menu-item tutor-dashboard-menu-index active'>
+              <a href="../dashboard/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                <span class='tutor-icon-dashboard tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                  Dashboard </span>
               </a>
             </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-my-profile">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/my-profile" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  My Profile
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-enrolled-courses">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/enrolled-courses" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-mortarboard-o tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Enrolled Courses
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-wishlist">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/wishlist" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-bookmark-bold tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Wishlist
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-reviews">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/reviews" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-star-bold tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Reviews
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-my-quiz-attempts">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/my-quiz-attempts" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-quiz-attempt tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  My Quiz Attempts
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-purchase_history">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/purchase_history" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-cart-bold tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Order History
-                </span>
-              </a>
-            </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-question-answer">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/question-answer" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-question tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Question &amp; Answer
-                </span>
+            <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses '>
+              <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                <span class='tutor-icon-rocket tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                  Profile </span>
               </a>
             </li>
             <li class="tutor-dashboard-menu-divider"></li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-settings">
-              <a href="https://themesvila.com/themes-wp/edusion/dashboard/settings" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-gear tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Settings
-                </span>
+            <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
+              <a href="../settings/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                  Settings </span>
               </a>
             </li>
-            <li class="tutor-dashboard-menu-item tutor-dashboard-menu-logout">
-              <a data-no-instant href="https://themesvila.com/themes-wp/edusion/dashboard/logout" class="tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black">
-                <span class="tutor-icon-signout tutor-dashboard-menu-item-icon"></span>
-                <span class="tutor-dashboard-menu-item-text tutor-ml-12">
-                  Logout
-                </span>
+            <li class='tutor-dashboard-menu-item tutor-dashboard-menu-logout '>
+              <a data-no-instant href="../../../controllers/logout.php" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                <span class='tutor-icon-signout tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                  Logout </span>
               </a>
             </li>
           </ul>
         </div>
 
+        <?php
+        $studentId = 123;
+
+        // Fetch total Enrolled Courses
+        $queryEnrolledCourses = "SELECT COUNT(*) AS total_enrolled FROM rooms WHERE student_id = $studentId";
+        $resultEnrolledCourses = mysqli_query($conn, $queryEnrolledCourses);
+        $rowEnrolledCourses = mysqli_fetch_assoc($resultEnrolledCourses);
+        $totalEnrolledCourses = $rowEnrolledCourses['total_enrolled'];
+        
+        // Fetch total Active Courses
+        $queryActiveCourses = "SELECT COUNT(*) AS total_active FROM rooms WHERE student_id = $studentId AND is_closed = 'false'";
+        $resultActiveCourses = mysqli_query($conn, $queryActiveCourses);
+        $rowActiveCourses = mysqli_fetch_assoc($resultActiveCourses);
+        $totalActiveCourses = $rowActiveCourses['total_active'];
+        
+        // Fetch total Completed Courses
+        $queryCompletedCourses = "SELECT COUNT(*) AS total_completed FROM rooms WHERE student_id = $studentId AND is_closed = 'true'";
+        $resultCompletedCourses = mysqli_query($conn, $queryCompletedCourses);
+        $rowCompletedCourses = mysqli_fetch_assoc($resultCompletedCourses);
+        $totalCompletedCourses = $rowCompletedCourses['total_completed'];
+        ?>
         <div class="tutor-col-12 tutor-col-md-8 tutor-col-lg-9">
           <div class="tutor-dashboard-content">
             <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-capitalize-text tutor-mb-24 tutor-dashboard-title">
@@ -139,13 +126,13 @@
                         <i class="tutor-icon-book-open" area-hidden="true"></i>
                       </span>
                       <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block">
-                        0
+                        <?php echo $totalEnrolledCourses;?>
                       </div>
                       <div class="tutor-fs-7 tutor-color-secondary">
-                        Enrolled Courses
+                        Total Enrolled Classes
                       </div>
                       <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto">
-                        0
+                      <?php echo $totalEnrolledCourses;?>
                       </div>
                     </div>
                   </div>
@@ -158,13 +145,13 @@
                         <i class="tutor-icon-mortarboard-o" area-hidden="true"></i>
                       </span>
                       <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block">
-                        0
+                      <?php echo $totalActiveCourses;?>
                       </div>
                       <div class="tutor-fs-7 tutor-color-secondary">
-                        Active Courses
+                        Active Classes
                       </div>
                       <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto">
-                        0
+                      <?php echo $totalActiveCourses;?>
                       </div>
                     </div>
                   </div>
@@ -177,13 +164,94 @@
                         <i class="tutor-icon-trophy" area-hidden="true"></i>
                       </span>
                       <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block">
-                        0
+                      <?php echo $totalCompletedCourses;?>
+                        
                       </div>
                       <div class="tutor-fs-7 tutor-color-secondary">
-                        Completed Courses
+                        Completed Classes
                       </div>
                       <div class="tutor-fs-4 tutor-fw-bold tutor-d-block tutor-d-lg-none tutor-ml-auto">
-                        0
+                      <?php echo $totalCompletedCourses;?>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <?php
+                ///////////////////////
+                $userID = 123;
+
+                $queryActiveRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'false' AND student_id = '$userID'";
+                $queryClosedRooms = "SELECT meeting_id, meeting_title, date, time, duration, meeting_link, is_closed FROM rooms WHERE is_closed = 'true' AND student_id = '$userID'";
+
+                $resultActiveRooms = mysqli_query($conn, $queryActiveRooms);
+                $resultClosedRooms = mysqli_query($conn, $queryClosedRooms);
+
+                $activeRooms = mysqli_fetch_all($resultActiveRooms, MYSQLI_ASSOC);
+                $closedRooms = mysqli_fetch_all($resultClosedRooms, MYSQLI_ASSOC);
+                ?>
+                <div class="tutor-dashboard-content">
+                  <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-mb-16 tutor-capitalize-text">Classrooms</div>
+                  <div class="tutor-dashboard-content-inner enrolled-courses">
+                    <div class="tutor-mb-32">
+                      <ul class="nav nav-tabs" id="enrolledCoursesTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link active" id="activeRoomsTab" data-bs-toggle="tab" href="#activeRoomsContent" role="tab" aria-controls="activeRoomsContent" aria-selected="true">Active Rooms</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <a class="nav-link" id="closedRoomsTab" data-bs-toggle="tab" href="#closedRoomsContent" role="tab" aria-controls="closedRoomsContent" aria-selected="false">Closed Rooms</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content" id="enrolledCoursesTabContent">
+                        <!-- Active Rooms Tab Content -->
+                        <div class="tab-pane fade show active" id="activeRoomsContent" role="tabpanel" aria-labelledby="activeRoomsTab">
+                          <?php
+                          foreach ($activeRooms as $room) {
+                            echo '<div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-8">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Meeting Title: ' . $room['meeting_title'] . '</h5>
+                                                        <p class="card-text">Date: ' . $room['date'] . '</p>
+                                                        <p class="card-text">Time: ' . $room['time'] . '</p>
+                                                        <p class="card-text">Duration: ' . $room['duration'] . ' Mins' . '</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 d-flex align-items-center justify-content-center">
+                                    <div class="btn-group" role="group">
+                                        <a href="' . $room['meeting_link'] . '" class="btn btn-primary"><i class="fa-solid fa-chalkboard" style="color: #f40b0b;"></i> Join Now</a>
+                                        </div>
+                                </div>
+                                            </div>
+                                          </div>';
+                          }
+                          ?>
+                        </div>
+
+                        <!-- Closed Rooms Tab Content -->
+                        <div class="tab-pane fade" id="closedRoomsContent" role="tabpanel" aria-labelledby="closedRoomsTab">
+                          <?php
+                          foreach ($closedRooms as $room) {
+                            echo '<div class="card mb-3">
+                                            <div class="row g-0">
+                                                <div class="col-md-6">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">Meeting Title: ' . $room['meeting_title'] . '</h5>
+                                                        <p class="card-text">Date: ' . $room['date'] . '</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="card-body"> 
+                                                        <p class="card-text">Time: ' . $room['time'] . '</p>
+                                                        <p class="card-text">Duration: ' . $room['duration'] . ' Mins' . '</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                          </div>';
+                          }
+                          ?>
+                        </div>
                       </div>
                     </div>
                   </div>
