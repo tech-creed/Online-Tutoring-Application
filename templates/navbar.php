@@ -11,12 +11,17 @@
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
+          <?php if($_SESSION['role'] === 'student'){?>
+          <li><a href="../../../">Home</a></li>
+          <?php }elseif($_SESSION['role'] === 'instructor'){?>
+            <li><a href="../../../">Home</a></li>
           <li><a href="../dashboard/">Dashboard</a></li>
+          <?php }?>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="/controllers/auth.php?logout_btn=true" class="get-started-btn">Logout</a>
+      <a href="/controllers/logout.php" class="get-started-btn">Logout</a>
 
     </div>
   </header>

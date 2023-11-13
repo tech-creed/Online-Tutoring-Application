@@ -22,36 +22,30 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
     <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student">
         <div class="tutor-container">
             <div class="tutor-row tutor-d-flex tutor-justify-between tutor-frontend-dashboard-header">
-                <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none;">
+                <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none">
                     <div class="tutor-dashboard-header-avatar">
                         <div class="tutor-avatar tutor-avatar-xl">
-                            <div class="tutor-ratio tutor-ratio-1x1"><img src="https://themesvila.com/themes-wp/edusion/wp-content/uploads/2023/11/team3-150x150.jpg" alt="Kenneth Renteria" /> </div>
+                            <div class="tutor-ratio tutor-ratio-1x1">
+                                <img src="../../../assets/wp-content/uploads/2023/11/team3-150x150.jpg" alt="David Ryan" />
+                            </div>
                         </div>
                     </div>
 
                     <div class="tutor-user-info tutor-ml-24">
-                        <div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
-                            <?php echo $_SESSION['name'] ?> </div>
-                        <div class="tutor-dashboard-header-stats">
-                            <div class="tutor-dashboard-header-ratings">
-                                <div class="tutor-ratings tutor-ratings-">
-                                    <div class="tutor-ratings-stars">
-                                        <span class="tutor-icon-star-line"></span><span class="tutor-icon-star-line"></span><span class="tutor-icon-star-line"></span><span class="tutor-icon-star-line"></span><span class="tutor-icon-star-line"></span>
-                                    </div>
-                                </div>
+                        <div class="tutor-dashboard-header-display-name tutor-color-black">
+                            <div class="tutor-fs-5 tutor-dashboard-header-greetings">
+                                Hello,
+                            </div>
+                            <div class="tutor-fs-4 tutor-fw-medium tutor-dashboard-header-username">
+                                <?php echo $_SESSION['name'] ?>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="tutor-header-right-side tutor-col-md-6 tutor-d-flex tutor-justify-end tutor-mt-20 tutor-mt-md-0">
-                    <div class="tutor-d-flex tutor-align-center">
-                        <a href="../class/newRoom.php" class="tutor-btn tutor-btn-outline-primary">
-                            <i class="tutor-icon-plus-square tutor-my-n4 tutor-mr-8"></i>
-                            Create a New Room </a>
-                    </div>
+                    <div class="tutor-d-flex tutor-align-center"></div>
                 </div>
             </div>
-
             <div class="tutor-row tutor-frontend-dashboard-maincontent">
                 <div class="tutor-col-12 tutor-col-md-4 tutor-col-lg-3 tutor-dashboard-left-menu">
                     <ul class="tutor-dashboard-permalinks">
@@ -61,15 +55,9 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                     Dashboard </span>
                             </a>
                         </li>
-                        <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses '>
-                            <a href="../students/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
-                                <span class='tutor-icon-rocket tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
-                                    Students Details </span>
-                            </a>
-                        </li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses active'>
                             <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
-                            <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                                <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Profile </span>
                             </a>
                         </li>
@@ -92,7 +80,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 <div class="tutor-col-12 tutor-col-md-8 tutor-col-lg-9">
                     <div class="tutor-col-12 tutor-col-md-8 tutor-col-lg-9">
                         <div class="tutor-dashboard-content">
-                            <?php $userData = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM users WHERE user_id = '{$_SESSION['user_id']}'"));?>
+                            <?php $userData = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM users WHERE user_id = '{$_SESSION['user_id']}'")); ?>
                             <div class="tutor-fs-5 tutor-fw-medium tutor-color-black tutor-mb-24">My Profile</div>
                             <div class="tutor-dashboard-content-inner tutor-dashboard-profile-data">
                                 <div class="tutor-row tutor-mb-24">
@@ -100,7 +88,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                         <span class="tutor-fs-6 tutor-color-secondary">Registration Date</span>
                                     </div>
                                     <div class="tutor-col-12 tutor-col-sm-7 tutor-col-lg-9">
-                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['reg_date']?></span>
+                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['reg_date'] ?></span>
                                     </div>
                                 </div>
                                 <div class="tutor-row tutor-mb-24">
@@ -108,7 +96,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                         <span class="tutor-fs-6 tutor-color-secondary">First Name</span>
                                     </div>
                                     <div class="tutor-col-12 tutor-col-sm-7 tutor-col-lg-9">
-                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['first_name']?></span>
+                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['first_name'] ?></span>
                                     </div>
                                 </div>
                                 <div class="tutor-row tutor-mb-24">
@@ -116,7 +104,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                         <span class="tutor-fs-6 tutor-color-secondary">Last Name</span>
                                     </div>
                                     <div class="tutor-col-12 tutor-col-sm-7 tutor-col-lg-9">
-                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['last_name']?></span>
+                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['last_name'] ?></span>
                                     </div>
                                 </div>
                                 <div class="tutor-row tutor-mb-24">
@@ -124,7 +112,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                         <span class="tutor-fs-6 tutor-color-secondary">Email</span>
                                     </div>
                                     <div class="tutor-col-12 tutor-col-sm-7 tutor-col-lg-9">
-                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['email']?></span>
+                                        <span class="tutor-fs-6 tutor-fw-medium tutor-color-black"><?php echo $userData['email'] ?></span>
                                     </div>
                                 </div>
                             </div>

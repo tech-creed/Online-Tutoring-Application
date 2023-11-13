@@ -3,11 +3,11 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../../../controllers/connect.php');
 if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
-        $user_id = $_SESSION['user_id'];
-        $role = $_SESSION['role'];
-    }else{
-        header("Location: ../../login.php");
-    }
+    $user_id = $_SESSION['user_id'];
+    $role = $_SESSION['role'];
+} else {
+    header("Location: ../../login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,7 +57,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
 
                     <div class="tutor-user-info tutor-ml-24">
                         <div class="tutor-fs-4 tutor-fw-medium tutor-color-black tutor-dashboard-header-username">
-                        <?php echo $_SESSION['name']?> </div>
+                            <?php echo $_SESSION['name'] ?> </div>
                         <div class="tutor-dashboard-header-stats">
                             <div class="tutor-dashboard-header-ratings">
                                 <div class="tutor-ratings tutor-ratings-">
@@ -93,9 +93,15 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                     Students Details </span>
                             </a>
                         </li>
+                        <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses'>
+                            <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                                    Profile </span>
+                            </a>
+                        </li>
                         <li class="tutor-dashboard-menu-divider"></li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
-                            <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <a href="../settings/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                                 <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Settings </span>
                             </a>
@@ -119,7 +125,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                 </div>';
                             unset($_SESSION['success']);
                         } elseif (isset($_SESSION['error'])) {
-                             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
                                     ' . $_SESSION['error'] . '
                                         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                         </div>';
@@ -179,7 +185,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                                     <div class="tutor-card">
                                         <div class="tutor-d-flex tutor-flex-lg-column tutor-align-center tutor-text-lg-center tutor-px-12 tutor-px-lg-24 tutor-py-8 tutor-py-lg-32">
                                             <span class="tutor-round-box tutor-mr-12 tutor-mr-lg-0 tutor-mb-lg-12">
-                                            <i class="tutor-icon-mortarboard-o" area-hidden="true"></i>
+                                                <i class="tutor-icon-mortarboard-o" area-hidden="true"></i>
                                             </span>
                                             <div class="tutor-fs-3 tutor-fw-bold tutor-d-none tutor-d-lg-block"><?php echo $totalActiveRooms; ?></div>
                                             <div class="tutor-fs-7 tutor-color-secondary">Total Active Rooms</div>
@@ -288,8 +294,9 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 </div>
             </div>
         </div>
-        <!-- footer -->
-        <?php include("../../../templates/footer.php") ?>
+    </div>
+    <!-- footer -->
+    <?php include("../../../templates/footer.php") ?>
 </body>
 
 </html>

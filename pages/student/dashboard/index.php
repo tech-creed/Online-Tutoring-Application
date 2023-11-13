@@ -268,13 +268,13 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
     <div id="tutor-dashboard-footer-mobile">
       <div class="tutor-container">
         <div class="tutor-row">
-          <a class="tutor-col-4 active" href="https://themesvila.com/themes-wp/edusion/dashboard/">
+          <a class="tutor-col-4 active" href="#">
             <i class="ttr tutor-icon-dashboard"></i>
-            <span>Dashboard</span>
+            <span>Online Learning</span>
           </a>
-          <a class="tutor-col-4" href="https://themesvila.com/themes-wp/edusion/dashboard/my-quiz-attempts/">
+          <a class="tutor-col-4" href="#">
             <i class="ttr tutor-icon-quiz-attempt"></i>
-            <span>Quiz Attempts</span>
+            <span>Contact</span>
           </a>
           <a class="tutor-col-4" href="#">
             <i class="ttr tutor-icon-hamburger-o tutor-dashboard-menu-toggler"></i>

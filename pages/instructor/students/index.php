@@ -72,6 +72,12 @@ mysqli_close($conn);
                                     Students Details </span>
                             </a>
                         </li>
+                        <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses'>
+                            <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                                    Profile </span>
+                            </a>
+                        </li>
                         <li class="tutor-dashboard-menu-divider"></li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
                             <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
