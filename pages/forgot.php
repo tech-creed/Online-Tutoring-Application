@@ -52,8 +52,7 @@ session_start();
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Online Tutoring</h5>
-                    <p class="text-center small">Online Tutoring</p>
+                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Forgot Password</h5>
                   </div>
 
                   <?php
@@ -96,9 +95,9 @@ session_start();
                     </div>
 
                     <div class="col-12">
-                      <label for="password" class="form-label">Password</label>
+                      <label for="password" class="form-label">New Password</label>
                       <input type="password" name="password" class="form-control" id="password" required>
-                      <div class="invalid-feedback">Please enter your password</div>
+                      <div class="invalid-feedback">Please enter your new password</div>
                     </div>
 
                     <div class="col-12">

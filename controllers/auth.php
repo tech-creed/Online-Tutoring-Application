@@ -28,7 +28,7 @@ if (isset($_REQUEST['register_btn'])) {
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['email'] = $email;
                 $_SESSION['Name'] = $fname . ' ' . $lname;
-                echo '<script>window.location.replace("../pages/register.php");</script>';
+                header('Location : ../pages/register.php');
             }
         }
     }
@@ -77,7 +77,7 @@ if (isset($_REQUEST['forgot_btn'])) {
         if ($data && otpSend($email, $otp)) {
             $_SESSION['email'] = $email;
             $_SESSION['status'] = "Mail Send Successfully";
-            echo '<script>window.location.replace("../pages/forgot.php");</script>';
+            header("Location: ../pages/forgot.php");
         }
     } else {
         $_SESSION['error'] = "Incorrect Email";
@@ -109,13 +109,6 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
         header("Location:../pages/forgot.php");
     }
     header("Location:../pages/login.php");
-}
-
-if (isset($_GET['logout_btn'])) {
-    unset($_SESSION['sess_id']);
-    unset($_SESSION['user_id']);
-    unset($_SESSION['role']);
-    header("Location:../index.php");
 }
 
 if (isset($_REQUEST['change_password'])) {
