@@ -74,7 +74,7 @@ include('../../../controllers/connect.php');
                             </a>
                         </li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses '>
-                            <a href="../studentsList.php" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+                            <a href="../students/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                                 <span class='tutor-icon-rocket tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Students Details </span>
                             </a>
@@ -100,15 +100,15 @@ include('../../../controllers/connect.php');
                         <?php
                         if (isset($_SESSION['success'])) {
                             echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-            ' . $_SESSION['success'] . '
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
+                                ' . $_SESSION['success'] . '
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>';
                             unset($_SESSION['success']);
                         } elseif (isset($_SESSION['error'])) {
-                            echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
-            ' . $_SESSION['error'] . '
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-          </div>';
+                             echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    ' . $_SESSION['error'] . '
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                        </div>';
                             unset($_SESSION['error']);
                         }
                         ?>
