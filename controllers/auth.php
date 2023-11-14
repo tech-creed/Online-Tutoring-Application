@@ -1,7 +1,5 @@
 <?php
 ob_start();
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 require_once("connect.php");
 require("functions.php");
 
@@ -25,28 +23,17 @@ if (isset($_REQUEST['register_btn'])) {
             $reg_date = date("Y-m-d h:i:s");
             $d = mysqli_query($conn, "INSERT INTO `users`(`user_id`, `password`, `email`, `role`, `first_name`, `last_name`, `is_verified`, `reg_date`) VALUES ('$user_id','$hashed_password','$email','$role','$fname','$lname','0','$reg_date')");
             $a = mysqli_query($conn, "INSERT INTO `email_verify`(`email`, `verification_code`) VALUES ('$email','$v_code')");
-            if ($d) {
-                $emailData = array(
-                    'fname' => $fname,
-                    'email' => $email,
-                    'user_id' => $user_id,
-                    'v_code' => $v_code
-                );
-                $encodedData = json_encode($emailData);
-
-                $command = "php sendMail.php";
-                $command .= " --post_data='".escapeshellarg($encodedData)."' > /dev/null 2>&1 &";
-                exec($command);
-
+            if ($d && sendMail($fname, $email, $user_id, $v_code)) {
                 session_unset();
                 $_SESSION['reg'] = true;
                 $_SESSION['user_id'] = $user_id;
                 $_SESSION['email'] = $email;
                 $_SESSION['Name'] = $fname . ' ' . $lname;
-                header('Location : ../pages/register.php');
+                header('Location:../pages/register.php');
             }
         }
     }
+
     header("Location:../pages/register.php");
 }
 
