@@ -3,25 +3,21 @@
 <link href="../../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center">
+  <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="/">Online Tutoring</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    <h1 class="logo me-auto"><a href="/">Online Tutoring</a></h1>
+    <!-- Uncomment below if you prefer to use an image logo -->
+    <!-- <a href="index.html" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <?php if($_SESSION['role'] === 'student'){?>
-          <li><a href="../../../">Home</a></li>
-          <?php }elseif($_SESSION['role'] === 'instructor'){?>
-            <li><a href="../../../">Home</a></li>
-          <li><a href="../dashboard/">Dashboard</a></li>
-          <?php }?>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+    <nav id="navbar" class="navbar order-last order-lg-0">
+      <ul>
+        <li><a href="../../../">Home</a></li>
+        <li><a href="../dashboard/">Dashboard</a></li>
+      </ul>
+      <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
 
-      <a href="/controllers/logout.php" class="get-started-btn">Logout</a>
+    <a href="/controllers/logout.php" class="get-started-btn">Logout</a>
 
-    </div>
-  </header>
+  </div>
+</header>

@@ -116,26 +116,50 @@ if (isset($_REQUEST['forgot_verify_btn'])) {
 }
 
 if (isset($_REQUEST['change_password'])) {
-    $user_id = mysqli_real_escape_string($conn, $_REQUEST['faculty_id']);
-    $old_pass = mysqli_real_escape_string($conn, $_REQUEST['old_pass']);
-    $password = mysqli_real_escape_string($conn, $_REQUEST['newpassword']);
-    $passwordre = mysqli_real_escape_string($conn, $_REQUEST['renewpassword']);
+    $user_id = $_SESSION['user_id'];
+    $old_password = mysqli_real_escape_string($conn, $_REQUEST['previous_password']);
+    $new_password = mysqli_real_escape_string($conn, $_REQUEST['new_password']);
+    $confirm_new_password = mysqli_real_escape_string($conn, $_REQUEST['confirm_new_password']);
+
     $user = mysqli_fetch_array(mysqli_query($conn, "SELECT * FROM `users` WHERE `user_id`='$user_id'"));
-    if (password_verify($old_pass, $user['password'])) {
-        if ($password == $passwordre) {
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $data = mysqli_query($conn, "UPDATE `faculty` SET `password`='$hashed_password' WHERE `facultyID`='$faculty_id'");
+
+    if (password_verify($old_password, $user['password'])) {
+        if ($new_password === $confirm_new_password) {
+            $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+            $update_query = mysqli_query($conn, "UPDATE `users` SET `password`='$hashed_password' WHERE `user_id`='$user_id'");
             
-            $_SESSION['status'] = 'Updated';
-            header("Location:../pages/");
+            if ($update_query) {
+                $_SESSION['success'] = 'Password updated successfully';
+                if($_SESSION['role'] === 'instructor'){
+                    header("Location:../pages/instructor/settings/"); 
+                }else{
+                    header("Location:../pages/student/settings/"); 
+                }
+            } else {
+                $_SESSION['error'] = 'Error updating password';
+                if($_SESSION['role'] === 'instructor'){
+                    header("Location:../pages/instructor/settings/"); 
+                }else{
+                    header("Location:../pages/student/settings/"); 
+                }
+            }
         } else {
-            $_SESSION['status'] = "Password Doesn't Match";
-            header("Location:../pages/");
+            $_SESSION['error'] = "New passwords don't match";
+            if($_SESSION['role'] === 'instructor'){
+                header("Location:../pages/instructor/settings/"); 
+            }else{
+                header("Location:../pages/student/settings/"); 
+            }
         }
     } else {
-        $_SESSION['status'] = 'Password Incorrect';
-        header("Location:../pages/");
+        $_SESSION['error'] = 'Current password incorrect';
+        if($_SESSION['role'] === 'instructor'){
+            header("Location:../pages/instructor/settings/"); 
+        }else{
+            header("Location:../pages/student/settings/"); 
+        }
     }
 }
+
 ob_end_clean();
 ?>
