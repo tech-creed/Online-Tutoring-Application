@@ -26,7 +26,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                     <div class="tutor-dashboard-header-avatar">
                         <div class="tutor-avatar tutor-avatar-xl">
                             <div class="tutor-ratio tutor-ratio-1x1">
-                                <img src="../../../assets/wp-content/uploads/2023/11/team3-150x150.jpg" alt="David Ryan" />
+                            <img src="../../../assets/img/student-profile.png" alt="Student Profile Icon" />
                             </div>
                         </div>
                     </div>

@@ -104,7 +104,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
     <!-- navbar -->
     <?php include("../../../templates/navbar.php") ?>
 
-    <div class="tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student container mt-5">
+    <div class="col-md-5 tutor-wrap tutor-wrap-parent tutor-dashboard tutor-frontend-dashboard tutor-dashboard-student container mt-5">
         <h2>Edit Room Details</h2>
         <br>
         <form action="../../../controllers/instructor/roomEdit.php" method="post" onsubmit="return disableSubmitButton()">
@@ -201,7 +201,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                             $studentResult = mysqli_query($conn, $studentQuery);
                             $studentData = mysqli_fetch_assoc($studentResult);
 
-                            echo '<span class="badge badge-primary mr-2" data-student-id="' . $studentId . '">' . $studentData['first_name'] . ' ' . $studentData['last_name'] . '  ' .
+                            echo '<span class="badge badge-primary mr-2" data-student-id="' . $studentId . '" style="margin:10px;">' . $studentData['first_name'] . ' ' . $studentData['last_name'] . '  ' .
                                 '<button type="button" class="close" aria-label="Close" onclick="removeStudent(\'' . $studentId . '\')">
                 <span aria-hidden="true">X</span>
             </button>
@@ -243,7 +243,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             function addStudent(studentId, studentName) {
                 var selectedStudentSection = document.querySelector("#selectedStudentSection");
                 selectedStudentSection.style.display = 'block';
-                var badge = '<span class="badge badge-primary mr-2" data-student-id="' + studentId + '" style="margin-left: 10px;">' + studentName + '   ' +
+                var badge = '<span class="badge badge-primary mr-2" data-student-id="' + studentId + '" style="margin: 10px;">' + studentName + '   ' +
                     '<button type="button" class="close" aria-label="Close" onclick="removeStudent(\'' + studentId + '\')">' +
                     '<span aria-hidden="true" >X</span>' +
                     '</button>' +

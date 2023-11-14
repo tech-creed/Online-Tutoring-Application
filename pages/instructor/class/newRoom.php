@@ -202,7 +202,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             function addStudent(studentId, studentName) {
                 var selectedStudentSection = document.querySelector("#selectedStudentSection");
                 selectedStudentSection.style.display = 'block';
-                var badge = '<span class="badge badge-primary mr-2" data-student-id="' + studentId + '" style="margin-left: 10px;">' + studentName + '   ' +
+                var badge = '<span class="badge badge-primary mr-2" data-student-id="' + studentId + '" style="margin: 10px;">' + studentName + '   ' +
                     '<button type="button" class="close" aria-label="Close" onclick="removeStudent(\'' + studentId + '\')">' +
                     '<span aria-hidden="true" >X</span>' +
                     '</button>' +

@@ -30,7 +30,7 @@ mysqli_close($conn);
                 <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none;">
                     <div class="tutor-dashboard-header-avatar">
                         <div class="tutor-avatar tutor-avatar-xl">
-                            <div class="tutor-ratio tutor-ratio-1x1"><img src="https://themesvila.com/themes-wp/edusion/wp-content/uploads/2023/11/team3-150x150.jpg" alt="Kenneth Renteria" /> </div>
+                        <div class="tutor-ratio tutor-ratio-1x1"><img src="../../../assets/img/instructor-img.jpeg" alt="Instructor Profile Icon" /> </div>
                         </div>
                     </div>
 

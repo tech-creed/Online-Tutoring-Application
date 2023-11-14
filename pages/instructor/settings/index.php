@@ -42,7 +42,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none;">
                     <div class="tutor-dashboard-header-avatar">
                         <div class="tutor-avatar tutor-avatar-xl">
-                            <div class="tutor-ratio tutor-ratio-1x1"><img src="https://themesvila.com/themes-wp/edusion/wp-content/uploads/2023/11/team3-150x150.jpg" alt="Kenneth Renteria" /> </div>
+                            <div class="tutor-ratio tutor-ratio-1x1"><img src="../../../assets/img/instructor-img.jpeg" alt="Instructor Profile Icon" /> </div>
                         </div>
                     </div>
 
@@ -140,9 +140,9 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
 
                                                     <input id="tutor_photo_dialogue_box" type="file" accept=".png,.jpg,.jpeg" />
                                                     <input type="hidden" class="upload_max_filesize" value="134217728">
-                                                    <div id="tutor_cover_area" data-fallback="https://themesvila.com/themes-wp/edusion/wp-content/plugins/tutor/assets/images/cover-photo.jpg" style="background-image:url(https://themesvila.com/themes-wp/edusion/wp-content/plugins/tutor/assets/images/cover-photo.jpg)">
+                                                    <div id="tutor_cover_area" data-fallback="../../../assets/img/cover-photo.jpg" style="background-image:url(../../../assets/img/cover-photo.jpg)">
                                                     </div>
-                                                    <div id="tutor_profile_area" data-fallback="https://themesvila.com/themes-wp/edusion/wp-content/plugins/tutor/assets/images/profile-photo.png" style="background-image:url(https://themesvila.com/themes-wp/edusion/wp-content/uploads/2023/11/team3.jpg)">
+                                                    <div id="tutor_profile_area" data-fallback="../../../assets/img/instructor-img.jpeg" style="background-image:url(../../../assets/img/instructor-img.jpeg)">
 
                                                     </div>
                                                 </div>
