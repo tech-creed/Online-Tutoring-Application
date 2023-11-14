@@ -52,8 +52,7 @@ session_start();
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Online Tutoring</h5>
-                    <p class="text-center small">Online Tutoring</p>
+                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Register</h5>
                   </div>
 
                   <?php
@@ -112,13 +111,15 @@ session_start();
 
                     <div class="col-12">
                       <!-- <label for="role" class="form-label">Role</label> -->
-                      <div class="input-group has-validation">
+                      <input type="text" id="role" class="form-control" value="Role: Student" readonly>
+                      <!-- <div class="input-group has-validation">
                         <select name="role" id="role" class="form-select" aria-label="select role" required>
                           <option selected="">Select role</option>
                           <option value="student">Student</option>
                           <option value="instructor">Instructor</option>
                         </select>
-                      </div>
+                      </div> -->
+                    <input type="hidden" name="role" class="form-control" value="student">
                     </div>
 
                     <div class="col-12">

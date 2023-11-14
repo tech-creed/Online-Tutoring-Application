@@ -1,5 +1,6 @@
 <?php 
-
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -41,13 +42,13 @@ function sendMail($name,$email, $userId, $v_code)
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'kmadavan018@gmail.com';                     //SMTP username
-        $mail->Password   = 'ayiiwxnfkibnkolo';                               //SMTP password
+        $mail->Username   = 'techcreed.info@gmail.com';                     //SMTP username
+        $mail->Password   = 'udnefsziyygmudtc';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('kmadavan018@gmail.com', 'Tutoring');
+        $mail->setFrom('techcreed.info@gmail.com', 'Tutoring');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
@@ -86,13 +87,13 @@ function otpSend($email, $otp)
         $mail->isSMTP();                                            //Send using SMTP
         $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'kmadavan018@gmail.com';                     //SMTP username
-        $mail->Password   = 'ayiiwxnfkibnkolo';                               //SMTP password
+        $mail->Username   = 'techcreed.info@gmail.com';                     //SMTP username
+        $mail->Password   = 'udnefsziyygmudtc';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('kmadavan018@gmail.com', 'Tutoring');
+        $mail->setFrom('techcreed.info@gmail.com', 'Tutoring');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
