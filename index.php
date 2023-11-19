@@ -29,6 +29,13 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
 </head>
@@ -440,7 +447,51 @@
 
       </div>
     </section-->
-
+    <!-- Bootstrap CSS -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title">
+                        <h1>Happy Learners</h1>
+                        <div class="section-borders">
+                            <span></span>
+                            <span class="black-border"></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="owl-carousel client-testimonial-carousel">
+                        <div class="single-testimonial-item">
+                            <p>Thank you Dr.Aisha so much for your amazing guidance and support in teaching me IELTS. Your dedication and expertise have truly helped me improve my skills. I’m grateful for all the valuable lessons and encouragement you’ve given me. Thank you again!”</p>
+                            <h3>Shahad  <span>Reem</span></h3>
+                        </div>
+                        <div class="single-testimonial-item">
+                            <p>Best thanks to Dr. Aisha for encouraging us to be the best in IELTS.  She has made a great effort to raise our standard in IELTS exams.  And she taught us all the steps we needed and understanding the exam with all its questions.  </p>
+                            <h3>Noura Hamad<span>Student</span></h3>
+                        </div>
+                        <div class="single-testimonial-item">
+                            <p>I extend my sincere thanks and appreciation to Dr.Aisha for her outstanding efforts in guiding us academically and supporting us during the foundation year.  I admit that Ms. Aishah had an effective role in improving our cognitive and moral level.  I also wish for her  more success in her  professional future and hope that she will continue her  journey of giving and inspiring others in achieving their professional endeavors.</p>
+                            <h3>Mayamin Nasser Alaamri.<span></span></h3>
+                        </div>
+                        <div class="single-testimonial-item">
+                            <p>Dr. Aisha,
+                                I want to thank you for your hard work on the IELTS training. I had a good marks at the exam because of following the tips that you gave. Thank you alot. 
+                                  yours faithfully,</p>
+                            <h3>Tasneem Zayid<span></span></h3>
+                        </div>
+                        <div class="single-testimonial-item">
+                            <p>I just wanted to take a moment to express my deepest gratitude for Dr.Aisha incredible dedication and guidance in teaching me IELTS. Your expertise and passion for the subject have truly made a difference in my learning journey. Your patience, encouragement, and insightful feedback have been invaluable. I am truly grateful for all the time and effort you have invested in me. Thank you for being an amazing teacher!.</p>
+                            <h3><span></span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -519,10 +570,13 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
-
 </body>
 
 </html>
