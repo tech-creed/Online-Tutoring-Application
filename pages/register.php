@@ -42,7 +42,7 @@ session_start();
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                <a href="../" class="logo d-flex align-items-center w-auto">
                   <img src="../assets/img/apple-touch-icon.png" style="width: 50px;" alt="college logo">
                 </a>
               </div>

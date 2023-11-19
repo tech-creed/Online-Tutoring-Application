@@ -53,7 +53,7 @@
                                     <h2>Oops! Page not found</h2>
                                     <p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
                                     <div class="home_btn">
-                                        <a href="#" class="btn_one">
+                                        <a href="../" class="btn_one">
                                             Back To Home
                                         </a>
                                     </div>

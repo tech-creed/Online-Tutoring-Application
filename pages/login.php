@@ -49,7 +49,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                <a href="../" class="logo d-flex align-items-center w-auto">
                   <img src="../assets/img/apple-touch-icon.png" style="width: 100px;" alt="college logo">
                 </a>
               </div><!-- End Logo -->
@@ -59,8 +59,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Online Tutoring</h5>
-                    <p class="text-center small">Online Tutoring</p>
+                    <h5 class="card-title text-center pb-0 fs-4" style='color:#5fcf80;'>Login</h5>
                   </div>
 
                   <?php
