@@ -227,10 +227,30 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             </div>
         </div>
 
+        <div id="tutor-dashboard-footer-mobile">
+            <div class="tutor-container">
+                <div class="tutor-row">
+                    <a class="tutor-col-4" href="../dashboard/">
+                        <i class="ttr tutor-icon-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="tutor-col-4 " href="../profile/">
+                    <i class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a class="tutor-col-4 active" href="../settings/">
+                    <i class='tutor-icon-gear tutor-dashboard-menu-item-icon'></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
 
     </div>
     <!-- footer -->
     <?php include("../../../templates/footer.php") ?>
+    <?php include('../../../templates/footer_link.php') ?>
 
 </body>
 

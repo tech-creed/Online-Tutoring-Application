@@ -32,10 +32,11 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
         margin-bottom: 15px;
     }
 
-    .btn-group{
-        display:'block';
+    .btn-group {
+        display: 'block';
     }
-    .btn-group a{
+
+    .btn-group a {
         margin: 12px;
     }
 </style>
@@ -51,7 +52,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 <div class="tutor-header-left-side tutor-dashboard-header tutor-col-md-6 tutor-d-flex tutor-align-center" style="border: none;">
                     <div class="tutor-dashboard-header-avatar">
                         <div class="tutor-avatar tutor-avatar-xl">
-                        <div class="tutor-ratio tutor-ratio-1x1"><img src="../../../assets/img/instructor-img.jpeg" alt="Instructor Profile Icon" /> </div>
+                            <div class="tutor-ratio tutor-ratio-1x1"><img src="../../../assets/img/instructor-img.jpeg" alt="Instructor Profile Icon" /> </div>
                         </div>
                     </div>
 
@@ -95,7 +96,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                         </li>
                         <li class='tutor-dashboard-menu-item tutor-dashboard-menu-my-courses'>
                             <a href="../profile/" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
-                            <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
+                                <span class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                                     Profile </span>
                             </a>
                         </li>
@@ -294,9 +295,32 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
                 </div>
             </div>
         </div>
+        <div id="tutor-dashboard-footer-mobile">
+            <div class="tutor-container">
+                <div class="tutor-row">
+                    <a class="tutor-col-4 active" href="../dashboard/">
+                        <i class="ttr tutor-icon-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="tutor-col-4 " href="../students/">
+                    <i class='tutor-icon-rocket tutor-dashboard-menu-item-icon'></i>
+                        <span>Students Details</span>
+                    </a>
+                    <a class="tutor-col-4 " href="../profile/">
+                    <i class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a class="tutor-col-3 " href="../settings/">
+                    <i class='tutor-icon-gear tutor-dashboard-menu-item-icon'></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- footer -->
     <?php include("../../../templates/footer.php") ?>
+    <?php include('../../../templates/footer_link.php') ?>
 </body>
 
 </html>

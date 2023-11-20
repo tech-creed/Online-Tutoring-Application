@@ -128,9 +128,32 @@ mysqli_close($conn);
                 </div>
             </div>
         </div>
+        <div id="tutor-dashboard-footer-mobile">
+            <div class="tutor-container">
+                <div class="tutor-row">
+                    <a class="tutor-col-4" href="../dashboard/">
+                        <i class="ttr tutor-icon-dashboard"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="tutor-col-4 active" href="../students/">
+                    <i class='tutor-icon-rocket tutor-dashboard-menu-item-icon'></i>
+                        <span>Students Details</span>
+                    </a>
+                    <a class="tutor-col-4 " href="../profile/">
+                    <i class="tutor-icon-user-bold tutor-dashboard-menu-item-icon"></i>
+                        <span>Profile</span>
+                    </a>
+                    <a class="tutor-col-3 " href="../settings/">
+                    <i class='tutor-icon-gear tutor-dashboard-menu-item-icon'></i>
+                        <span>Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <?php include("../../../templates/footer.php") ?>
+    <?php include('../../../templates/footer_link.php') ?>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
