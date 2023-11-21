@@ -15,7 +15,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Login</title>
+  <title>Stalwart Eduvate | Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -50,7 +50,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
 
               <div class="d-flex justify-content-center py-4">
                 <a href="../" class="logo d-flex align-items-center w-auto">
-                  <img src="../assets/img/apple-touch-icon.png" style="width: 100px;" alt="college logo">
+                  <img src="../assets/img/apple-touch-icon.png" style="width: 100px;" alt="logo">
                 </a>
               </div><!-- End Logo -->
 

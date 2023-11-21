@@ -8,7 +8,7 @@ session_start();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Forgot Password</title>
+  <title>Stalwart Eduvate | Forgot Password</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@ session_start();
 
               <div class="d-flex justify-content-center py-4">
                 <a href="../" class="logo d-flex align-items-center w-auto">
-                  <img src="../assets/img/apple-touch-icon.png" style="width: 100px;" alt="college logo">
+                  <img src="../assets/img/apple-touch-icon.png" style="width: 100px;" alt="logo">
                 </a>
               </div><!-- End Logo -->
 

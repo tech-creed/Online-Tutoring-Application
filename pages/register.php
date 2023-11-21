@@ -8,7 +8,7 @@ session_start();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Sign up</title>
+  <title>Stalwart Eduvate | Sign up</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -43,7 +43,7 @@ session_start();
 
               <div class="d-flex justify-content-center py-4">
                 <a href="../" class="logo d-flex align-items-center w-auto">
-                  <img src="../assets/img/apple-touch-icon.png" style="width: 50px;" alt="college logo">
+                  <img src="../assets/img/apple-touch-icon.png" style="width: 50px;" alt="application logo">
                 </a>
               </div>
 
@@ -132,7 +132,7 @@ session_start();
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
                         <label class="form-check-label" for="acceptTerms">I agree and accept the <a
-                            href="conditions.php">terms and conditions</a></label>
+                            href="#">terms and conditions</a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>

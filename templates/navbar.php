@@ -4,8 +4,8 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
 
-    <h1 class="logo me-auto"><a href="/">Online Tutoring</a></h1>
-    <!-- <a href="index.html" class="logo me-auto"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    <h2 class="logo me-auto"><a href="/">Stalwart Eduvate</a></h2>
+    <a href="/" class="logo me-auto"><img src="../../../assets/img/apple-touch-icon.png" alt="logo" class="img-fluid"></a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
       <ul>
