@@ -1,5 +1,5 @@
 <?php
-   
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +18,9 @@
   <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
@@ -29,12 +31,15 @@
   <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
 
   <!-- Template Main CSS File -->
   <link href="../assets/css/style.css" rel="stylesheet">
@@ -68,7 +73,8 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>"At Stalwart Eduvate, teaching is our passion. Today's lessons shape tomorrow's leaders. Join our community of dedicated educators and eager learners.</h2>
+      <h2>"At Stalwart Eduvate, teaching is our passion. Today's lessons shape tomorrow's leaders. Join our community of
+        dedicated educators and eager learners.</h2>
       <a href="pages/register.php" class="btn-get-started">Join Us</a>
     </div>
   </section><!-- End Hero -->
@@ -81,20 +87,32 @@
 
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="../assets/img/about.jpg" class="img-fluid" alt="">
+            <!-- <img src="../assets/img/about.jpg" class="img-fluid" alt=""> -->
+            <div id="introVideoContainer">
+  <video id="introVideo" autoplay loop>
+    <source src="../assets/video/The English Hub - Overview Video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Our Approach to Learning</h3>
             <p class="fst-italic">
-            At Stalwart Eduvate, we believe in a holistic approach to education that goes beyond traditional boundaries. Here's what sets us apart:
+              At Stalwart Eduvate, we believe in a holistic approach to education that goes beyond traditional
+              boundaries. Here's what sets us apart:
             </p>
             <ul>
-              <li><i class="bi bi-check-circle"></i> Our approach is centered around understanding individual learning styles and adapting our methods to ensure a personalized and effective learning experience..</li>
-              <li><i class="bi bi-check-circle"></i> Engage in real-time discussions, collaborative projects, and interactive lessons that bring the learning material to life..</li>
-              <li><i class="bi bi-check-circle"></i>  Receive timely feedback and assessments to track your progress and identify areas for growth, ensuring a dynamic and evolving learning experience..</li>
+              <li><i class="bi bi-check-circle"></i> Our approach is centered around understanding individual learning
+                styles and adapting our methods to ensure a personalized and effective learning experience..</li>
+              <li><i class="bi bi-check-circle"></i> Engage in real-time discussions, collaborative projects, and
+                interactive lessons that bring the learning material to life..</li>
+              <li><i class="bi bi-check-circle"></i> Receive timely feedback and assessments to track your progress and
+                identify areas for growth, ensuring a dynamic and evolving learning experience..</li>
             </ul>
             <p>
-            Discover a new dimension of learning at Stalwart Eduvate. Our approach is designed to inspire, engage, and empower you on your educational journey. Welcome to an educational experience that transcends boundaries and unlocks the full potential of every learner.
+              Discover a new dimension of learning at Stalwart Eduvate. Our approach is designed to inspire, engage, and
+              empower you on your educational journey. Welcome to an educational experience that transcends boundaries
+              and unlocks the full potential of every learner.
             </p>
 
           </div>
@@ -143,7 +161,8 @@
             <div class="content" style="align-self:center">
               <h3>Why Choose Us ?</h3>
               <p>
-              Unlock a World of Learning Opportunities At Stalwart Eduvate, we stand out as your preferred online learning platform for several compelling reasons
+                Unlock a World of Learning Opportunities At Stalwart Eduvate, we stand out as your preferred online
+                learning platform for several compelling reasons
               </p>
               <div class="text-center">
                 <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -157,21 +176,25 @@
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
                     <h4>Expert Educators</h4>
-                    <p>Our platform is home to a diverse team of experienced and passionate educators. They bring a wealth of knowledge to the virtual classroom , ensuring a high-quality learning experience for every student</p>
+                    <p>Our platform is home to a diverse team of experienced and passionate educators. They bring a
+                      wealth of knowledge to the virtual classroom , ensuring a high-quality learning experience for
+                      every student</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
                     <h4>Cutting-edge Technology</h4>
-                    <p>With a commitment to innovation, we leverage cutting-edge technology to create an immersive and interactive online learning environment.</p>
+                    <p>With a commitment to innovation, we leverage cutting-edge technology to create an immersive and
+                      interactive online learning environment.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
                     <h4>Flexibility and Convenience</h4>
-                    <p>Life is busy, and learning should be flexible. Our platform provides you the freedom to schedule sessions at your convenience allowing you to learn from the comfort of your own space.</p>
+                    <p>Life is busy, and learning should be flexible. Our platform provides you the freedom to schedule
+                      sessions at your convenience allowing you to learn from the comfort of your own space.</p>
                   </div>
                 </div>
               </div>
@@ -286,7 +309,9 @@
                 </div>
 
                 <h3><a href="course-details.html">IELTS</a></h3>
-                <p>Unlock your path to global opportunities with our IELTS course. Expert guidance, tailored strategies, and comprehensive practice materials prepare you to excel in the exam. Elevate your language proficiency and confidently pursue your dreams with our IELTS success program</p>
+                <p>Unlock your path to global opportunities with our IELTS course. Expert guidance, tailored strategies,
+                  and comprehensive practice materials prepare you to excel in the exam. Elevate your language
+                  proficiency and confidently pursue your dreams with our IELTS success program</p>
                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
@@ -300,7 +325,7 @@
                 </div> -->
               </div>
             </div>
-          </div> 
+          </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="course-item">
@@ -312,7 +337,8 @@
                 </div>
 
                 <h3><a href="course-details.html">Academic English</a></h3>
-                <p>Boost your academic skills with our Academic English course. Tailored for success, it hones your reading, writing, and communication. Unleash your academic potential with us!</p>
+                <p>Boost your academic skills with our Academic English course. Tailored for success, it hones your
+                  reading, writing, and communication. Unleash your academic potential with us!</p>
                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
@@ -326,7 +352,7 @@
                 </div> -->
               </div>
             </div>
-          </div> 
+          </div>
 
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="course-item">
@@ -338,7 +364,8 @@
                 </div>
 
                 <h3><a href="course-details.html">OET</a></h3>
-                <p>Master medical English with our OET course. Tailored for professionals, it's your key to career advancement. Elevate your language skills for success!</p>
+                <p>Master medical English with our OET course. Tailored for professionals, it's your key to career
+                  advancement. Elevate your language skills for success!</p>
                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
                   <div class="trainer-profile d-flex align-items-center">
                     <img src="../assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
@@ -352,7 +379,7 @@
                 </div> -->
               </div>
             </div>
-          </div> 
+          </div>
 
         </div>
 
@@ -427,49 +454,110 @@
     </section-->
     <!-- Bootstrap CSS -->
     <div class="section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title">
-                        <h1>Happy Learners</h1>
-                        <div class="section-borders">
-                            <span></span>
-                            <span class="black-border"></span>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-title">
+              <h1>Happy Learners</h1>
+              <div class="section-borders">
+                <span></span>
+                <span class="black-border"></span>
+                <span></span>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="owl-carousel client-testimonial-carousel">
-                        <div class="single-testimonial-item">
-                            <p>Thank you Dr.Aisha so much for your amazing guidance and support in teaching me IELTS. Your dedication and expertise have truly helped me improve my skills. I’m grateful for all the valuable lessons and encouragement you’ve given me. Thank you again!”</p>
-                            <h3>Shahad  <span>Reem</span></h3>
-                        </div>
-                        <div class="single-testimonial-item">
-                            <p>Best thanks to Dr. Aisha for encouraging us to be the best in IELTS.  She has made a great effort to raise our standard in IELTS exams.  And she taught us all the steps we needed and understanding the exam with all its questions.  </p>
-                            <h3>Noura Hamad<span>Student</span></h3>
-                        </div>
-                        <div class="single-testimonial-item">
-                            <p>I extend my sincere thanks and appreciation to Dr.Aisha for her outstanding efforts in guiding us academically and supporting us during the foundation year.  I admit that Ms. Aishah had an effective role in improving our cognitive and moral level.  I also wish for her  more success in her  professional future and hope that she will continue her  journey of giving and inspiring others in achieving their professional endeavors.</p>
-                            <h3>Mayamin Nasser Alaamri.<span></span></h3>
-                        </div>
-                        <div class="single-testimonial-item">
-                            <p>Dr. Aisha,
-                                I want to thank you for your hard work on the IELTS training. I had a good marks at the exam because of following the tips that you gave. Thank you alot. 
-                                  yours faithfully,</p>
-                            <h3>Tasneem Zayid<span></span></h3>
-                        </div>
-                        <div class="single-testimonial-item">
-                            <p>I just wanted to take a moment to express my deepest gratitude for Dr.Aisha incredible dedication and guidance in teaching me IELTS. Your expertise and passion for the subject have truly made a difference in my learning journey. Your patience, encouragement, and insightful feedback have been invaluable. I am truly grateful for all the time and effort you have invested in me. Thank you for being an amazing teacher!.</p>
-                            <h3><span></span></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>    
+        <div class="row">
+          <div class="col-md-12">
+            <div class="owl-carousel client-testimonial-carousel">
+              <div class="single-testimonial-item">
+                <p>Ms. Renuka Devi
+                  Faculty, Department of English,
+                  Oman College of Health Sciences, Sultanate of Oman.</p>
+                <h3>Ms. Renuka <span>Devi</span></h3>
+
+                <div class="audio-wrapper">
+                  <button class="playPauseButton" data-audioplayer="audioPlayer1"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg></button>
+                  <audio id="audioPlayer1" src="../assets/audio/learner-1.mp3"></audio>
+                </div>
+
+              </div>
+              <div class="single-testimonial-item">
+                <p>Ms. Marwa
+                  Faculty, College of Applied Sciences, Sur, Sultanate of Oman.</p>
+                <h3>Noura Hamad<span>Student</span></h3>
+
+                <div class="audio-wrapper">
+                  <button class="playPauseButton" data-audioplayer="audioPlayer2"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg></button>
+                  <audio id="audioPlayer2" src="../assets/audio/learner-2.mp3"></audio>
+                </div>
+
+              </div>
+              <div class="single-testimonial-item">
+                <p>Ms. Sharada Kandula
+                  Faculty, Department of English,
+                  Oman College of Health Sciences, Sultanate of Oman.</p>
+                <h3>Ms. Sharada Kandula<span></span></h3>
+
+                <div class="audio-wrapper">
+                  <button class="playPauseButton" data-audioplayer="audioPlayer3"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg></button>
+                  <audio id="audioPlayer3" src="../assets/audio/learner-3.mp3"></audio>
+                </div>
+
+              </div>
+              <div class="single-testimonial-item">
+                <p>Ms. Sajida Farzana Nawaz,
+                  Faculty, Sur University College, Sultanate of Oman.</p>
+                <h3>Ms. Sajida Farzana Nawaz<span></span></h3>
+
+                <div class="audio-wrapper">
+                  <button class="playPauseButton" data-audioplayer="audioPlayer4"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg></button>
+                  <audio id="audioPlayer4" src="../assets/audio/learner-4.mp3"></audio>
+                </div>
+
+              </div>
+              <div class="single-testimonial-item">
+                <p>Ms. Shahad
+Student, German College of TECHNOLOGY, Muscat, 
+Sultanate of Oman.</p>
+                <h3>Ms. Shahad<span></span></h3>
+
+                <div class="audio-wrapper">
+                  <button class="playPauseButton" data-audioplayer="audioPlayer5"><svg
+                      xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg></button>
+                  <audio id="audioPlayer5" src="../assets/audio/learner-5.mp3"></audio>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
@@ -510,9 +598,11 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Join Us</h4>
-            
-            <p>Join us in shaping a brighter future through education. Discover a world of knowledge and possibilities.</p>
-            <a href="/pages/register.php" class="get-started-btn" style="margin:0;width:100%;text-align:center">Join Us</a>
+
+            <p>Join us in shaping a brighter future through education. Discover a world of knowledge and possibilities.
+            </p>
+            <a href="/pages/register.php" class="get-started-btn" style="margin:0;width:100%;text-align:center">Join
+              Us</a>
           </div>
 
         </div>
@@ -540,7 +630,8 @@
   </footer><!-- End Footer -->
 
   <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -548,13 +639,54 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <!-- Template Main JS File -->
   <script src="../assets/js/main.js"></script>
+
+  <script>
+    const playPauseButtons = document.querySelectorAll('.playPauseButton');
+    let isPlaying = false;
+    playPauseButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const audioId = button.getAttribute('data-audioplayer');
+        console.log(audioId)
+        const audioPlayer = document.getElementById(audioId);
+        console.log(audioPlayer)
+
+        if (!isPlaying) {
+          audioPlayer.play();
+          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+  <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
+</svg>`;
+        } else {
+          audioPlayer.pause();
+          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+  <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
+</svg>`;
+        }
+        isPlaying = !isPlaying;
+      });
+    })
+
+
+    document.getElementById('introVideo').addEventListener('click', function() {
+  if (this.paused) {
+    this.play();
+  } else {
+    this.pause();
+  }
+});
+  </script>
 </body>
 
 </html>
