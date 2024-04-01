@@ -1155,6 +1155,9 @@ section {
 .inner-learners h3{
   font-weight: bold;
 }
+.owl-item{
+  width: 320px!important;
+}
 
 /*--------------------------------------------------------------
 # Pricing
@@ -1737,5 +1740,8 @@ section {
 @media only screen and (max-width: 600px) {
   #introVideo {
     width: 75%; 
+  }
+  .logo {
+    display: none!important;
   }
 }
