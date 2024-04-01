@@ -89,11 +89,19 @@
           <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
             <!-- <img src="../assets/img/about.jpg" class="img-fluid" alt=""> -->
             <div id="introVideoContainer">
-  <video id="introVideo" autoplay loop>
-    <source src="../assets/video/The English Hub - Overview Video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
+              <video id="introVideo" autoplay loop>
+                <source src="../assets/video/The English Hub - Overview Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <div id="playIconOverlay">
+              <svg
+                      xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-play"
+                      viewBox="0 0 16 16">
+                      <path
+                        d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z" />
+                    </svg>
+        </div>
+            </div>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Our Approach to Learning</h3>
@@ -538,8 +546,8 @@
               </div>
               <div class="single-testimonial-item">
                 <p>Ms. Shahad
-Student, German College of TECHNOLOGY, Muscat, 
-Sultanate of Oman.</p>
+                  Student, German College of TECHNOLOGY, Muscat,
+                  Sultanate of Oman.</p>
                 <h3>Ms. Shahad<span></span></h3>
 
                 <div class="audio-wrapper">
@@ -665,12 +673,12 @@ Sultanate of Oman.</p>
 
         if (!isPlaying) {
           audioPlayer.play();
-          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
+          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-pause" viewBox="0 0 16 16">
   <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5m4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5"/>
 </svg>`;
         } else {
           audioPlayer.pause();
-          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+          button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
   <path d="M10.804 8 5 4.633v6.734zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696z"/>
 </svg>`;
         }
@@ -679,13 +687,23 @@ Sultanate of Oman.</p>
     })
 
 
-    document.getElementById('introVideo').addEventListener('click', function() {
-  if (this.paused) {
-    this.play();
-  } else {
-    this.pause();
-  }
-});
+    document.getElementById('playIconOverlay').addEventListener('click', function () {
+      const video = document.getElementById('introVideo')
+      if (video.paused) {
+        video.play();
+        this.style.display = 'none' 
+      } else {
+        video.pause();
+        // this.style.display = 'block' 
+      }
+    });
+    document.getElementById('introVideo').addEventListener('click', function () {
+      if (this.paused) {
+        this.play();
+      } else {
+        this.pause();
+      }
+    });
   </script>
 </body>
 
