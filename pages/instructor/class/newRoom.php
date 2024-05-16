@@ -1,6 +1,8 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
+ob_start();
 include('../../../controllers/connect.php');
 if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
     $user_id = $_SESSION['user_id'];
@@ -245,3 +247,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
 </body>
 
 </html>
+
+<?php
+ob_end_flush();
+?>

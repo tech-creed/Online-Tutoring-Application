@@ -3,6 +3,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../connect.php');
 
+ob_start();
+
 $meeting_id = $_GET['meeting_id'] ?? null;
 
 if ($meeting_id === null) {
@@ -29,4 +31,5 @@ if ($deleteStmt === false) {
 
 mysqli_stmt_close($deleteStmt);
 mysqli_close($conn);
+ob_start();
 ?>

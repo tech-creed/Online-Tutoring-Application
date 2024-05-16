@@ -15,7 +15,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Stalwart Eduvate | Login</title>
+  <title>English Hub | Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

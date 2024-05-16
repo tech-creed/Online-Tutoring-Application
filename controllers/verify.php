@@ -1,5 +1,6 @@
 <?php 
 require("connect.php");
+ob_start();
 
 if (isset($_GET['email']) && isset($_GET['v_code'])) {
     $result = mysqli_query($conn, "SELECT * FROM `email_verify` WHERE `email`='$_GET[email]' AND `verification_code`='$_GET[v_code]'");
@@ -23,4 +24,6 @@ if (isset($_GET['email']) && isset($_GET['v_code'])) {
         </script>";
     }
 }
+
+ob_end_flush();
 ?>

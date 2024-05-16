@@ -4,7 +4,7 @@
 <header id="header" class="fixed-top">
   <div class="container d-flex align-items-center">
 
-    <h2 class="logo me-auto"><a href="/">Stalwart Eduvate</a></h2>
+    <h2 class="logo me-auto"><a href="/">English Hub</a></h2>
     <a href="/" class="logo me-auto"><img src="../../../assets/img/apple-touch-icon.png" alt="logo" class="img-fluid"></a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
@@ -13,7 +13,7 @@
         <li><a href="../dashboard/">Dashboard</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>  
-    </nav><!-- .navbar -->
+    </nav>
     <a href="/controllers/logout.php" class="get-started-btn" style="padding: 10px 30px 10px 30px;">Logout</a>
 
   </div>

@@ -8,7 +8,7 @@ session_start();
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Stalwart Eduvate | Sign up</title>
+  <title>English Hub | Sign up</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 

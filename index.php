@@ -9,7 +9,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Stalwart Eduvate | Home</title>
+  <title>English Hub | Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h2 class="logo me-auto"><a href="/">Stalwart Eduvate</a></h2>
+      <h2 class="logo me-auto"><a href="/">English Hub</a></h2>
       <a href="/" class="logo me-auto"><img src="../assets/img/apple-touch-icon.png" alt="logo" class="img-fluid"></a>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -73,7 +73,7 @@
   <section id="hero" class="d-flex justify-content-center align-items-center">
     <div class="container position-relative" data-aos="zoom-in" data-aos-delay="100">
       <h1>Learning Today,<br>Leading Tomorrow</h1>
-      <h2>"At Stalwart Eduvate, teaching is our passion. Today's lessons shape tomorrow's leaders. Join our community of
+      <h2>"At English Hub, teaching is our passion. Today's lessons shape tomorrow's leaders. Join our community of
         dedicated educators and eager learners.</h2>
       <a href="pages/register.php" class="btn-get-started">Join Us</a>
     </div>
@@ -105,7 +105,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <h3>Our Approach to Learning</h3>
             <p class="fst-italic">
-              At Stalwart Eduvate, we believe in a holistic approach to education that goes beyond traditional
+              At English Hub, we believe in a holistic approach to education that goes beyond traditional
               boundaries. Here's what sets us apart:
             </p>
             <ul>
@@ -117,7 +117,7 @@
                 identify areas for growth, ensuring a dynamic and evolving learning experience..</li>
             </ul>
             <p>
-              Discover a new dimension of learning at Stalwart Eduvate. Our approach is designed to inspire, engage, and
+              Discover a new dimension of learning at English Hub. Our approach is designed to inspire, engage, and
               empower you on your educational journey. Welcome to an educational experience that transcends boundaries
               and unlocks the full potential of every learner.
             </p>
@@ -168,7 +168,7 @@
             <div class="content" style="align-self:center">
               <h3>Why Choose Us ?</h3>
               <p>
-                Unlock a World of Learning Opportunities At Stalwart Eduvate, we stand out as your preferred online
+                Unlock a World of Learning Opportunities At English Hub, we stand out as your preferred online
                 learning platform for several compelling reasons
               </p>
               <div class="text-center">
@@ -577,7 +577,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Stalwart Eduvate</h3>
+            <h3>English Hub</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -622,7 +622,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Stalwart Eduvate</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>English Hub</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
           Designed & Developed by <a href="" style="color:tomato;font-weight:700">Tech Creed</a>

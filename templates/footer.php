@@ -3,7 +3,7 @@
 
     <div style="color: #fff;" class="me-md-auto text-center text-md-start">
       <div class="copyright">
-        &copy; Copyright <strong><span>Stalwart Eduvate</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>English Hub</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         Designed & Developed by <a href="" style="color:tomato;font-weight:700">Tech Creed</a>

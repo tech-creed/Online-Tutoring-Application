@@ -1,5 +1,6 @@
 <?php
 require_once("connect.php");
+ob_start();
 if (isset($_POST['new_first_name']) && isset($_POST['new_last_name'])) {
     $newFirstName = mysqli_real_escape_string($conn, $_POST['new_first_name']);
     $newLastName = mysqli_real_escape_string($conn, $_POST['new_last_name']);
@@ -35,4 +36,5 @@ if (isset($_POST['new_first_name']) && isset($_POST['new_last_name'])) {
     }
     exit();
 }
+ob_end_flush();
 ?>

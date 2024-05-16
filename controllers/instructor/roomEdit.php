@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../connect.php');
+
+ob_start();
 ?>
 
 <?php
@@ -125,5 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: ../../pages/404.php');
     exit();
 }
+
+ob_end_flush();
 ?>
 

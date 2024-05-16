@@ -2,7 +2,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Stalwart Eduvate</title>
+  <title>English Hub</title>
   <link rel="stylesheet" id="wp-block-library-css" href="../../../assets/wp-includes/css/dist/block-library/style.min.css?ver=6.4.1" media="all" />
 
   <script>

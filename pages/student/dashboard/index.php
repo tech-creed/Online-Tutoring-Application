@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include('../../../controllers/connect.php');
+
+ob_start();
 if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSION['role'])) {
         $user_id = $_SESSION['user_id'];
         $role = $_SESSION['role'];
@@ -82,7 +84,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
             </li>
             <li class="tutor-dashboard-menu-divider"></li>
             <li class='tutor-dashboard-menu-item tutor-dashboard-menu-settings '>
-              <a href="#" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
+              <a href="../settings" class='tutor-dashboard-menu-item-link tutor-fs-6 tutor-color-black'>
                 <span class='tutor-icon-gear tutor-dashboard-menu-item-icon'></span> <span class='tutor-dashboard-menu-item-text tutor-ml-12'>
                   Settings </span>
               </a>
@@ -293,3 +295,7 @@ if (isset($_SESSION['sess_id']) && isset($_SESSION['user_id']) && isset($_SESSIO
 </body>
 
 </html>
+
+<?php
+ob_end_flush();
+?>
