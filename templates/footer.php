@@ -6,7 +6,7 @@
         &copy; Copyright <strong><span>English Hub</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        Designed & Developed by <a href="" style="color:tomato;font-weight:700">Tech Creed</a>
+        Designed & Developed by <a href="https://tech-creed.netlify.app/" target="_blank" style="color:tomato;font-weight:700">Tech Creed</a>
       </div>
     </div>
     <div class="social-links text-center text-md-right pt-3 pt-md-0">

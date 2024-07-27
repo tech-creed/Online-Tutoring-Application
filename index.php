@@ -584,6 +584,7 @@
               Ontario, Canada <br><br>
               <strong>Phone:</strong> +1 548-994-4435<br>
               <strong>Email:</strong> araihana24@hotmail.com<br>
+              <strong>Instructor Email:</strong> instructor@englishhub.ca<br>
             </p>
           </div>
 
