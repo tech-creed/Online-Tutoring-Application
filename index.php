@@ -172,7 +172,7 @@
                 learning platform for several compelling reasons
               </p>
               <div class="text-center">
-                <a href="about.html" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
               </div>
             </div>
           </div>
@@ -315,7 +315,7 @@
                   <!-- <p class="price">$169</p> -->
                 </div>
 
-                <h3><a href="course-details.html">IELTS</a></h3>
+                <h3><a href="#">IELTS</a></h3>
                 <p>Unlock your path to global opportunities with our IELTS course. Expert guidance, tailored strategies,
                   and comprehensive practice materials prepare you to excel in the exam. Elevate your language
                   proficiency and confidently pursue your dreams with our IELTS success program</p>
@@ -343,7 +343,7 @@
                   <!-- <p class="price">$250</p> -->
                 </div>
 
-                <h3><a href="course-details.html">Academic English</a></h3>
+                <h3><a href="#">Academic English</a></h3>
                 <p>Boost your academic skills with our Academic English course. Tailored for success, it hones your
                   reading, writing, and communication. Unleash your academic potential with us!</p>
                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
@@ -370,7 +370,7 @@
                   <!-- <p class="price">$180</p> -->
                 </div>
 
-                <h3><a href="course-details.html">OET</a></h3>
+                <h3><a href="#">OET</a></h3>
                 <p>Master medical English with our OET course. Tailored for professionals, it's your key to career
                   advancement. Elevate your language skills for success!</p>
                 <!-- <div class="trainer d-flex justify-content-between align-items-center">
@@ -576,14 +576,14 @@
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-3 col-md-6 footer-contact">
+        <div class="col-lg-3 col-md-6 footer-contact">
             <h3>English Hub</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 010101 01010 010<br>
-              <strong>Email:</strong> info@example.com<br>
+              54 Verona Street <br>
+              Kitchener, ON N2R 1T9<br>
+              Ontario, Canada <br><br>
+              <strong>Phone:</strong> +1 548-994-4435<br>
+              <strong>Email:</strong> araihana24@hotmail.com<br>
             </p>
           </div>
 
@@ -625,7 +625,7 @@
           &copy; Copyright <strong><span>English Hub</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed & Developed by <a href="" style="color:tomato;font-weight:700">Tech Creed</a>
+          Designed & Developed by <a href="https://tech-creed.netlify.app/" target="_blank" style="color:tomato;font-weight:700">Tech Creed</a>
         </div>
       </div>
       <div class="social-links text-center text-md-right pt-3 pt-md-0">

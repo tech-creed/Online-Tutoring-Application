@@ -92,21 +92,21 @@ session_start();
                       <!-- <label for="ID" class="form-label">Email id</label> -->
                       <div class="input-group has-validation">
                         <!-- <span class="input-group-text" id="inputGroupPrepend">@</span> -->
-                        <input type="email" name="email" placeholder="Email id" class="form-control" id="ID" required>
-                        <div class="invalid-feedback">Please enter your Faculty ID</div>
+                        <input type="email" name="email" placeholder="Email ID" class="form-control" id="ID" required>
+                        <div class="invalid-feedback">Please enter your Email ID</div>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <!-- <label for="password" class="form-label">First Name</label> -->
-                      <input type="text" name="fname" class="form-control" id="fname" placeholder="First name" required>
-                      <div class="invalid-feedback">Please enter your password</div>
+                      <input type="text" name="fname" class="form-control" id="fname" placeholder="First Name" required>
+                      <div class="invalid-feedback">Please enter your First Name</div>
                     </div>
 
                     <div class="col-12">
                       <!-- <label for="password" class="form-label">Last Name</label> -->
-                      <input type="text" name="lname" class="form-control" id="lname" placeholder="Last name" required>
-                      <div class="invalid-feedback">Please enter your password</div>
+                      <input type="text" name="lname" class="form-control" id="lname" placeholder="Last Name" required>
+                      <div class="invalid-feedback">Please enter your Last Name</div>
                     </div>
 
                     <div class="col-12">

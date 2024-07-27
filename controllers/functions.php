@@ -39,24 +39,24 @@ function sendMail($name,$email, $userId, $v_code)
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'techcreed.info@gmail.com';                     //SMTP username
-        $mail->Password   = 'udnefsziyygmudtc';                               //SMTP password
+        $mail->Username   = 'no-reply@englishhub.ca';                     //SMTP username
+        $mail->Password   = 'EnglishHub_01';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('techcreed.info@gmail.com', 'Tutoring');
+        $mail->setFrom('no-reply@englishhub.ca', 'EnglishHub');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
 
         $email_template = "../pages/mail.html";
-        $link = "http://localhost/controllers/verify.php?email=$email&v_code=$v_code";
+        $link = "https://englishhub.ca/controllers/verify.php?email=$email&v_code=$v_code";
 
         $message = file_get_contents($email_template);
         $message = str_replace('%name%', $name, $message);
@@ -64,7 +64,7 @@ function sendMail($name,$email, $userId, $v_code)
         $message = str_replace('%link%', $link, $message);
 
 
-        $mail->Subject = 'Email Verification from Tutoring application';
+        $mail->Subject = 'Email Verification from EnglishHub';
         $mail->Body    = $message;
 
         $mail->send();
@@ -84,17 +84,17 @@ function otpSend($email, $otp)
 
     try {
         //Server settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
         $mail->isSMTP();                                            //Send using SMTP
-        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->Host       = 'smtp.hostinger.com';                     //Set the SMTP server to send through
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $mail->Username   = 'techcreed.info@gmail.com';                     //SMTP username
-        $mail->Password   = 'udnefsziyygmudtc';                               //SMTP password
+        $mail->Username   = 'no-reply@englishhub.ca';                     //SMTP username
+        $mail->Password   = 'EnglishHub_01';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
         //Recipients
-        $mail->setFrom('techcreed.info@gmail.com', 'Tutoring');
+        $mail->setFrom('no-reply@englishhub.ca', 'EnglishHub');
         $mail->addAddress($email);     //Add a recipient
 
         //Content
@@ -106,7 +106,7 @@ function otpSend($email, $otp)
         $message = str_replace('%email%', $email, $message);
         $message = str_replace('%otp%', $otp, $message);
 
-        $mail->Subject = 'Otp from Tutoring application';
+        $mail->Subject = 'OTP from EnglishHub';
         $mail->Body    = $message;
 
         $mail->send();

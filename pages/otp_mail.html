@@ -28,9 +28,9 @@
                     </tr>
                     <tr>
                         <td style="text-align:center;">
-                            <a href="https://learningplatform-demo.000webhostapp.com/" style="border-radius: 50%;" title="logo"
-                                target="_blank">
-                                <img width="100" src="../assets/img/apple-touch-icon.png" style=" border-radius: 50%;" title="logo" alt="logo">
+                            <a href="https://englishhub.ca/" style="border-radius: 50%;" title="logo" target="_blank">
+                                <img width="100" src="../assets/img/apple-touch-icon.png" style=" border-radius: 50%;"
+                                    title="logo" alt="logo">
                             </a>
                         </td>
                     </tr>
@@ -46,20 +46,26 @@
                                 </tr>
                                 <tr>
                                     <td style="padding:0 35px;">
-                                        <h2
+                                        <h4><span style="font-size:20px">Dear %email%,<br></span></h4>
+                                        <!-- <h4
                                             style="color:#1e1e2d; font-weight:500; margin:0;font-size:28px;font-family:'Rubik',sans-serif;">
-                                            Forgot Password - OTP Mail from English Hub<br /><span style="font-size:20px">Email :
-                                                %email%</span></h2>
+                                            Dear %email%,</span></h4> -->
+                                            <br>
+
+                                        <h2 id="ref_link">Your OTP is: %otp%</h2>
+
+                                        <p class="verify" id="ref_btn"
+                                            style="background:#20e277;text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">
+                                            Copy Code</p><br>
+
                                         <span
                                             style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
                                         <br>
-                                        <span id="ref_link">%otp%</span><br>
-                                        <p class="verify" id="ref_btn"
-                                            style="background:#20e277;text-decoration:none !important; font-weight:500; margin-top:35px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">
-                                            COPY LINK</p>
                                         <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
-                                            Official mail : test@gmail.com<br>
-                                            Official Website : <a href="#">https://test</a>
+                                            Official Website : <a href="https://englishhub.ca/">englishhub.ca</a>
+                                            <br />
+                                            This is an official email from EnglishHub. Please do not reply to this
+                                            email.
                                         </p>
                                     </td>
                                 </tr>
@@ -73,9 +79,9 @@
                     </tr>
                     <tr>
                         <td style="text-align:center;">
-                            <a href="http://localhost/" target="_blank"
+                            <a href="https://englishhub.ca/" target="_blank"
                                 style="font-size:14px; color:rgba(69, 80, 86, 0.7411764705882353); line-height:18px; margin:0 0 0; text-decoration: none;">&copy;
-                                <strong>test.com</strong></a>
+                                <strong>englishhub.ca</strong></a>
                         </td>
                     </tr>
                     <tr>
@@ -88,12 +94,12 @@
     <script>
         var ref_btn = document.getElementById("ref_btn");
         var ref_link = document.getElementById("ref_link");
-        ref_btn.onclick = function(){
+        ref_btn.onclick = function () {
             navigator.clipboard.writeText(ref_link.innerHTML);
-            ref_btn.innerHTML = "COPIED";
-            setTimeout(function(){
-                ref_btn.innerHTML = "COPY CODE";
-            },3000);
+            ref_btn.innerHTML = "Copied";
+            setTimeout(function () {
+                ref_btn.innerHTML = "Copy Code";
+            }, 3000);
         }
     </script>
 </body>

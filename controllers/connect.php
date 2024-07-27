@@ -1,9 +1,9 @@
 <?php
     session_start();
     $db_host = "localhost";
-    $db_user = "root";
-    $db_pass = "";
-    $db_name = "tuts_db";
+    $db_user = "u801898191_english_hub";
+    $db_pass = "Bu3>uY:WZF";
+    $db_name = "u801898191_english_hub_db";
 
     // $db_host = "localhost";
     // $db_user = "id21543369_techceed";
